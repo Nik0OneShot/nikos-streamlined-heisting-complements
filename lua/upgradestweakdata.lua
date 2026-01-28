@@ -139,7 +139,7 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 
 
 	-- PERK DECKS
-
+		
 	-- Crook - Expert Composure armor (25% -> 30%)
 	self.values.player.level_2_armor_multiplier[3] = 1.7
 	self.values.player.level_3_armor_multiplier[3] = 1.7
@@ -167,6 +167,11 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 	self.values.temporary.loose_ammo_give_team[1][2] = 0
 	self.specialization_descs[10][3].multiperk2 = "0"
 
+	-- maniac, sync the timers.
+	self.cocaine_stacks_tick_t = 4
+	self.cocaine_stacks_decay_t = 4
+	self.specialization_descs[14][1].multiperk8 = "4"
+		
 	-- Anarchist - Lust for Life amount (30 -> 20)
 	for _, v in pairs(self.values.player.damage_to_armor[1]) do
 		v[1] = 2
