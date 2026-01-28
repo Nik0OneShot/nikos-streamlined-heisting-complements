@@ -57,10 +57,14 @@ Hooks:PostHook(WeaponTweakData, "init", "shc_init", function (self)
 				-- Add armor piercing to crossbows
 				weap_data.armor_piercing_chance = 1
 			elseif cat_map.minigun then
+					weap_data.panic_suppression_chance = 0.1
 				-- Buff minigun damage in exchange for falloff/movement speed penalty
 				if not weap_data.damage_falloff then
 					weap_data.stats.damage = math.ceil(weap_data.stats.damage * 1.2)
 					weap_data.damage_falloff = FALLOFF_TEMPLATE.SPECIAL_LOW
+				end
+				elseif cat_map.lmg then
+                   weap_data.panic_suppression_chance = 0.05
 				end
 			elseif cat_map.shotgun then
 				-- Restore shotgun pellets
