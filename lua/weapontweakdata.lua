@@ -65,7 +65,6 @@ Hooks:PostHook(WeaponTweakData, "init", "shc_init", function (self)
 				end
 				elseif cat_map.lmg then
                    weap_data.panic_suppression_chance = 0.05
-				end
 			elseif cat_map.shotgun then
 				-- Restore shotgun pellets
 				weap_data.rays = math.max(weap_data.rays or 1, 12)
