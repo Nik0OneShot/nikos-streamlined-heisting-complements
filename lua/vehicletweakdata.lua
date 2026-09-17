@@ -1,4 +1,4 @@
-Hooks:PostHook(VehicleTweakData, "init', "makecarsepic", function(self)
+Hooks:PostHook(VehicleTweakData, "init", "makecarsepic", function(self)
   -- change every car to have 5000 health and 90 fov.
 	self.falcogini.damage = { max_health = 5000 }
   self.falcogini.fov = 90
