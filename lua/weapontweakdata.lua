@@ -57,10 +57,12 @@ Hooks:PostHook(WeaponTweakData, "init", "shc_init", function (self)
 
 	-- commando 101
 	self.ray.stats.damage = 5000 -- have to edit in tweakdata.lua to actually change the damage
+	self.ray.stats_modifiers = { damage = 1 }
 
 	-- hrl 7
 	self.rpg7.stats.reload = 21
 	self.rpg7.stats.damage = 15000 -- have to go into tweakdata.lua to actually change the damage.
+	self.rpg7.stats_modifiers = { damage = 1 }
 
 	-- Generic weapon stat changes
 	for weap_id, weap_data in pairs(self) do
