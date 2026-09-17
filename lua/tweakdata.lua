@@ -130,4 +130,4 @@ tweak_data.experience_manager.limited_xmas_bonus_multiplier = 1.5
 tweak_data:digest_recursive(tweak_data.experience_manager)
 
 -- lets you pick death wish and death sentence off the bat
-tweak_data.difficulty_level_locks = { 0, 0, 0, 0, 0, 0, 0, 0, }
+tweak_data.difficulty_level_locks = { 0, 0, 0, 0, 0, 0, 0, 0 }
