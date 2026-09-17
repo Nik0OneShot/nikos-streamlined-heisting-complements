@@ -20,12 +20,12 @@ Hooks:PostHook(SkillTreeTweakData, "init", "shc_init", function (self)
 	self.trees[2].tiers[3][1] = "joker"
 
 	-- swap far away and shotgun CQB.
-	self.trees[4].tiers[2][1] = "iron_man"
-	self.trees[4].tiers[3][1] = "show_of_force"
+	self.trees[4].tiers[2][1] = "far_away"
+	self.trees[4].tiers[3][1] = "shotgun_cqb"
 		
 	-- swap die hard and shock and awe.
-	self.trees[5].tiers[2][1] = "far_away"
-	self.trees[5].tiers[3][1] = "shotgun_cqb"
+	self.trees[5].tiers[2][1] = "iron_man"
+	self.trees[5].tiers[3][1] = "show_of_force"
 
 	-- swap saw masscare and bulletstorm
 	self.trees[6].tiers[2][1] = "carbon_blade"
