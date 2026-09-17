@@ -69,3 +69,45 @@ tweak_data.experience_manager.pro_day_multiplier = {
 	1,
 	1
 }
+
+-- exp card drops give more xp now
+tweak_data.experience_manager.loot_drop_value = {
+	xp10 = 8000,
+	xp15 = 16000,
+	xp20 = 32000,
+	xp30 = 64000,
+	xp40 = 96000,
+	xp50 = 128000,
+	xp60 = 192000,
+	xp70 = 256000,
+	xp80 = 320000,
+	xp90 = 384000,
+	xp100 = 512000,
+	xp_pda9_1 = 250000,
+	xp_pda9_2 = 3000000,
+}
+
+-- taken from eclipse, flattens XP curve.
+-- Clear out the vanilla level table (including hardcoded lvls 1-9)
+tweak_data.experience_manager.levels = {}
+
+-- Flatten the curve of experience per level distribution, the exponent is reduced from 3 to 1.5
+-- Reduce the total amount of experience required to go through lvl 0-100 from 23.3 mil to 20.2 mil
+local multiplier = 1
+local exp_step_start = 1
+local exp_step_end = 100
+local exp_step = 1 / (exp_step_end - exp_step_start)
+local exp_step_last_points = 5000
+local exp_step_curve = 1.5
+
+for i = exp_step_start, exp_step_end do
+	tweak_data.experience_manager.levels[i] = {
+		points = math.round((500000 - exp_step_last_points) * math.pow(exp_step * (i - exp_step_start), exp_step_curve) + exp_step_last_points) * multiplier,
+	}
+end
+
+-- make the limited bonuses bettar because tran wrong
+tweak_data.experience_manager.limited_xmas_bonus_multiplier = 1.5
+tweak_data.experience_manager.limited_bonus_multiplier = 1.5
+
+tweak_data:digest_recursive(tweak_data.experience_manager)
