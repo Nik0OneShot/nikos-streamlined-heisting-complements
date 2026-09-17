@@ -36,6 +36,15 @@ Hooks:PostHook(WeaponTweakData, "init", "shc_init", function (self)
 	-- Street Sweeper
 	self.striker.stats.reload = 15
 
+	-- nikos weapon rebalances, put here so that cat_map can appropriately fuck with it. i hope.
+
+	-- amcar rifle
+	self.amcar.CLIP_AMMO_MAX = 30
+	self.amcar.NR_CLIPS_MAX = 11
+	self.amcar.AMMO_MAX = self.amcar.CLIP_AMMO_MAX * self.amcar.NR_CLIPS_MAX
+	self.amcar.fire_mode_data.fire_rate = 60 / 1000
+	self.amcar.stats.damage = 54
+
 	-- Generic weapon stat changes
 	for weap_id, weap_data in pairs(self) do
 		if type(weap_data) == "table" and weap_data.stats then
@@ -145,5 +154,4 @@ Hooks:PostHook(WeaponTweakData, "init", "shc_init", function (self)
 
 		end
 	end
-
 end)
