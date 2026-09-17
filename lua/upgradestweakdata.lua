@@ -61,7 +61,7 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 	self.skill_descs.carbon_blade.multipro = "100%" -- "75%" > "100%"
 
 	-- Eco Sentry cost reduction (5% -> 10%)
-	self.skill_descs.eco_sentry.multibasic = "10%"
+	self.skill_descs.eco_sentry.multibasic = "25%" -- "10%" > "25%"
 
 	-- Hardware Expert restart chance (10% -> 30%)
 	self.values.player.drill_autorepair_1[1] = 0.3
