@@ -35,6 +35,10 @@ Hooks:PostHook(SkillTreeTweakData, "init", "shc_init", function (self)
 	self.trees[15].tiers[3][2] = "frenzy"
 	self.trees[15].tiers[4][1] = "wolverine"
 
+	-- swap counterstrike and bloodthirst
+	self.trees[15].tiers[2][1] = "drop_soap"
+	self.trees[15].tiers[3][1] = "bloodthirst"
+
 	-- Add melee damage boost duriation to first perk of Sociopath
 	table.insert(self.specializations[9][1].upgrades, "melee_stacking_hit_expire_t")
 
