@@ -327,6 +327,7 @@ Hooks:PostHook( NarrativeTweakData, "init", "SC_Narratives", function(self)
 		700000,
 		700000
 	}
+end)
 
 	-- black lives matter eclipse code now
 NarrativeTweakData.jc_presets = { ["very_common"] = 10, ["slightly_very_common"] = 20, ["common"] = 30, ["slightly_rare"] = 40, ["rare"] = 50, ["slightly_very_rare"] = 60, ["very_rare"] = 70, ["extremely_rare"] = 80, }
