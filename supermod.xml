@@ -8,6 +8,7 @@
 			<post :hook_id="menu/playerinventorygui"/>
 			<post :hook_id="blackmarketmanager"/>
 			<post :hook_id="playermanager"/>
+			<post :hook_id="savefilemanager"/>
 		</group>
 		<group hook_id="lib/player_actions/skills/">
 			<post :hook_id="playeractionexperthandling"/>
