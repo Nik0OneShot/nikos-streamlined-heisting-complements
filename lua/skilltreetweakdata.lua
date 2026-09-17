@@ -15,10 +15,10 @@ Hooks:PostHook(SkillTreeTweakData, "init", "shc_init", function (self)
 	self.skills.bloodthirst[1].upgrades[1] = "player_temp_melee_kill_increase_reload_speed_1"
 	self.skills.bloodthirst[2].upgrades[1] = "player_melee_damage_stacking_1"
 
-	-- Swap Frenzy and Berserker
-	self.trees[15].tiers[3][2] = "frenzy"
-	self.trees[15].tiers[4][1] = "wolverine"
-
+	-- swap stockholm syndrome and joker
+	self.trees[2].tiers[2][2] = "stockholm_syndrome"
+	self.trees[2].tiers[3][1] = "joker"
+		
 	-- swap die hard and shock and awe.
 	self.trees[5].tiers[2][1] = "show_of_force"
 	self.trees[5].tiers[3][1] = "iron_man"
@@ -30,6 +30,10 @@ Hooks:PostHook(SkillTreeTweakData, "init", "shc_init", function (self)
 	-- swap low blow and unseen strike
 	self.trees[12].tiers[3][1] = "unseen_strike"
 	self.trees[12].tiers[4][1] = "backstab"
+
+	-- Swap Frenzy and Berserker
+	self.trees[15].tiers[3][2] = "frenzy"
+	self.trees[15].tiers[4][1] = "wolverine"
 
 	-- Add melee damage boost duriation to first perk of Sociopath
 	table.insert(self.specializations[9][1].upgrades, "melee_stacking_hit_expire_t")
