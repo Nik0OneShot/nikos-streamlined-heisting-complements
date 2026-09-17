@@ -42,27 +42,27 @@ local bag_limit_xp = {
   chas = { limit = 14, xp = 1000 },
 }
 local small_loot_xp = {
-  gen_atm = 250, -- ATM, Money Counter
-  slot_machine_payout = 250, -- Winning Slip
+  gen_atm = 500, -- ATM, Money Counter
+  slot_machine_payout = 1000, -- Winning Slip
   spawn_bucket_of_money = 250, -- Au Ticket
-  ring_band = 50, -- ??? Ring
-  federali_medal = 50, -- Federali Medal
-  money_bundle = 20, -- Money Bundle, Casino Chips, Phone, Tablet
-  diamondheist_vault_bust = 20, -- Necklace
-  diamondheist_vault_diamond = 20, -- Jewelry, Jewels
-  diamondheist_big_diamond = 20, -- Saphire, Tiara
-  mus_small_artifact = 20, -- Small Artifact
-  vault_loot_chest = 20, -- Chest
-  vault_loot_diamond_chest = 20, -- Diamond Chest
-  vault_loot_banknotes = 20, -- Banknotes
-  vault_loot_silver = 20, -- Silver
-  vault_loot_diamond_collection = 20, -- Diamond Collection
-  vault_loot_trophy = 20, -- Trophy
-  vault_loot_gold = 20, -- Gold Bar
-  vault_loot_cash = 20, -- Money Roll
-  vault_loot_coins = 20, -- Coins
-  vault_loot_ring = 20, -- Ring
-  vault_loot_jewels = 20, -- Diamonds
+  ring_band = 250, -- ??? Ring
+  federali_medal = 250, -- Federali Medal
+  money_bundle = 100, -- Money Bundle, Casino Chips, Phone, Tablet
+  diamondheist_vault_bust = 250, -- Necklace
+  diamondheist_vault_diamond = 250, -- Jewelry, Jewels
+  diamondheist_big_diamond = 250, -- Saphire, Tiara
+  mus_small_artifact = 250, -- Small Artifact
+  vault_loot_chest = 250, -- Chest
+  vault_loot_diamond_chest = 250, -- Diamond Chest
+  vault_loot_banknotes = 250, -- Banknotes
+  vault_loot_silver = 250, -- Silver
+  vault_loot_diamond_collection = 250, -- Diamond Collection
+  vault_loot_trophy = 250, -- Trophy
+  vault_loot_gold = 500, -- Gold Bar
+  vault_loot_cash = 250 -- Money Roll
+  vault_loot_coins = 250, -- Coins
+  vault_loot_ring = 250, -- Ring
+  vault_loot_jewels = 250, -- Diamonds
 }
 local last_timestamp = 0
 
