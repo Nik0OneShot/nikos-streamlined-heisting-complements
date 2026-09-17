@@ -9,6 +9,7 @@
 			<post :hook_id="blackmarketmanager"/>
 			<post :hook_id="playermanager"/>
 			<post :hook_id="savefilemanager"/>
+			<post :hook_id="jobmanager"/>
 		</group>
 		<group hook_id="lib/player_actions/skills/">
 			<post :hook_id="playeractionexperthandling"/>
