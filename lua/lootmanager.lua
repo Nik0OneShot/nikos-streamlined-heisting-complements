@@ -25,6 +25,7 @@ local heist_xp = {
   escape_cafe_day = 300, -- Cafe Escape
   escape_garage = 300, -- Garage Escape
   escape_overpass = 300, -- Overpass Escape
+  escape_overpass_night = 300, -- overpass escape but night
   escape_park = 300, -- Park Escape
   escape_park_day = 300, -- Park Escape
   escape_street = 300, -- Street Escape
