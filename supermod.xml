@@ -10,6 +10,7 @@
 			<post :hook_id="playermanager"/>
 			<post :hook_id="savefilemanager"/>
 			<post :hook_id="jobmanager"/>
+			<post :hook_id="lootmanager"/>
 		</group>
 		<group hook_id="lib/player_actions/skills/">
 			<post :hook_id="playeractionexperthandling"/>
