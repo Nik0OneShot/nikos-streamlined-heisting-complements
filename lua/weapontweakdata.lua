@@ -45,6 +45,9 @@ Hooks:PostHook(WeaponTweakData, "init", "shc_init", function (self)
 	self.amcar.fire_mode_data.fire_rate = 60 / 1000
 	self.amcar.stats.damage = 54
 
+	-- chimano 88
+	self.glock_17.stats.damage = 72
+
 	-- Generic weapon stat changes
 	for weap_id, weap_data in pairs(self) do
 		if type(weap_data) == "table" and weap_data.stats then
