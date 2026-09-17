@@ -1,7 +1,5 @@
 Hooks:PostHook(InteractionTweakData, "init", "gage packages xd xd xd uwuwuwwuwuwuwuwuwuwuwuwuwuwuwuwuw and other stuff too #goon", function(self)
 	self.gage_assignment.timer = 0
-	self.take_pardons.timer = 0
-    self.ordnance_bag.timer = 1.5
     self.requires_ecm_jammer_atm.timer = 8
     self.requires_ecm_jammer_double.timer = 4
     self.shaped_sharge.timer = 2 -- wait its actually named "shaped_sharge"
