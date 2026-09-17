@@ -89,6 +89,7 @@ tweak_data.experience_manager.loot_drop_value = {
 
 -- if on one down, add 25% extra xp.
 if Global.game_settings and Global.game_settings.one_down then
+	tweak_data.experience_manager.pro_job_multiplier = 1.25
 	tweak_data.experience_manager.pro_job_new = 1.25
 end
 
@@ -113,6 +114,5 @@ end
 
 -- make the limited bonuses bettar because tran wrong
 tweak_data.experience_manager.limited_xmas_bonus_multiplier = 1.5
-tweak_data.experience_manager.limited_bonus_multiplier = 1.5
 
 tweak_data:digest_recursive(tweak_data.experience_manager)
