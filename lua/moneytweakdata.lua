@@ -1,6 +1,5 @@
 local pro_job = Global.game_settings and Global.game_settings.one_down
 local difficulty = Global.game_settings and Global.game_settings.difficulty or "normal"
-local difficulty_index = tweak_data:difficulty_to_index(difficulty)
 
 Hooks:PostHook(MoneyTweakData, "init", "50/50 split", function (self)
 	self.offshore_rate = 0.50
@@ -11,7 +10,7 @@ Hooks:PostHook(MoneyTweakData, "init", "50/50 split", function (self)
                           cash80 = 450000, cash90 = 500000, cash100 = 600000, cash_preorder = 800000 }
 
 	-- make pro jobs give you 50% money. on death wish and death sentence, this is increased to 100%!
-	if difficulty_index < 7 then
+	if difficulty == "easy" or "normal" or "hard" or "overkill" or "overkill_145" or "easy_wish" then
 	self.pro_job_new = 0
 	if Global.game_settings and Global.game_settings.one_down then
 		self.pro_job_new = 1.50
