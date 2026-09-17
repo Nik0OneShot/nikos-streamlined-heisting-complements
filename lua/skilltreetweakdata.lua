@@ -31,6 +31,10 @@ Hooks:PostHook(SkillTreeTweakData, "init", "shc_init", function (self)
 	self.trees[6].tiers[2][1] = "carbon_blade"
 	self.trees[6].tiers[3][2] = "ammo_reservoir"
 
+	-- swap nimble and sixth sense
+	self.trees[10].tiers[2][2] = "second_chances"
+	self.trees[10].tiers[3][1] = "chameleon"
+
 	-- swap low blow and unseen strike
 	self.trees[12].tiers[3][1] = "unseen_strike"
 	self.trees[12].tiers[4][1] = "backstab"
