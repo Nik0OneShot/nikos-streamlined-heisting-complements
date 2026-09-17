@@ -5,4 +5,10 @@ Hooks:PostHook(MoneyTweakData, "init", "50/50 split", function (self)
   -- increase the money you get from the card cash shit.
 	self.loot_drop_cash = { cash10 = 100000, cash20 = 150000, cash30 = 200000, cash40 = 250000, cash50 = 300000, cash60 = 350000, cash70 = 400000, 
                           cash80 = 450000, cash90 = 500000, cash100 = 600000, cash_preorder = 800000 }
+
+	-- make pro jobs give you 25% money.
+	self.pro_job_new = 0
+	if Global.game_settings and Global.game_settings.one_down then
+		self.pro_job_new = 1.25
+	end
 end)
