@@ -1,13 +1,9 @@
 {
-	"name" : "Streamlined Heisting Complements",
-	"description" : "Complementary skill, perk and weapon changes to go with Streamlined Heisting",
+	"name" : "Streamlined Heisting Complements - niko edition",
+	"description" : "complements, except i added my own shit",
 	"author" : "Hoppip",
 	"priority" : 400,
 	"color" : "0.043 0.808 0.6",
 	"image" : "mod.png",
 	"version" : "1.7.4",
-	"updates" : [{
-		"identifier" : "pd2-sh-complements",
-		"host": { "meta": "https://updates.hoppip.at/pd2-sh-complements" }
-	}]
 }
