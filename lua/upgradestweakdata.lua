@@ -11,9 +11,9 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 	self.skill_descs.inspire.multipro2 = "40"
 
 	-- Forced Friendship ace damage absorption (0.5 -> 1.5 / 8 max -> 4 max)
-	self.values.team.damage.hostage_absorption[1] = 0.15
+	self.values.team.damage.hostage_absorption[1] = 0.2 -- 0.15 > 0.2
 	self.values.team.damage.hostage_absorption_limit = 4
-	self.skill_descs.triathlete.multipro = "1.5"
+	self.skill_descs.triathlete.multipro = "2" -- "1.5" > 2
 	self.skill_descs.triathlete.multipro2 = "4"
 
 	-- Confident intimidation multiplier
@@ -21,15 +21,16 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 
 	-- Joker damage multiplier
 	self.values.player.convert_enemies_damage_multiplier[1] = 1
-	self.values.player.convert_enemies_damage_multiplier[2] = 1.35
+	self.values.player.convert_enemies_damage_multiplier[2] = 2 -- 1.35 > 2
+	self.values.player.convert_enemies_damage_multiplier.multipro = "100%" -- "35%" > "100%"
 
 	-- Partners in Crime basic damage reduction (50% -> 75%)
-	self.values.player.passive_convert_enemies_health_multiplier[1] = 0.25
-	self.skill_descs.control_freak.multibasic3 = "75%"
-
+	self.values.player.passive_convert_enemies_health_multiplier[1] = 0.5 -- 0.25 > 0.5
+	self.skill_descs.control_freak.multibasic3 = "50%" -- "75%" > "50%"
+ 
 	-- Partners in Crime ace damage reduction (54% -> 15%)
-	self.values.player.passive_convert_enemies_health_multiplier[2] = 0.1
-	self.skill_descs.control_freak.multipro4 = "15%"
+	self.values.player.passive_convert_enemies_health_multiplier[2] = 0.25 -- 0.1 > 0.25
+	self.skill_descs.control_freak.multipro4 = "25%" -- "15%" > "25%"
 
 	-- Ammo Efficiency (1 bullet -> 2 bullets)
 	self.values.player.head_shot_ammo_return[1].ammo = 2
@@ -37,8 +38,8 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 	self.skill_descs.spotter_teamwork.multibasic3 = "2"
 
 	-- Aggressive Reload (100% -> 75%)
-	self.values.temporary.single_shot_fast_reload[1][1] = 1.75
-	self.skill_descs.speedy_reload.multipro = "75%"
+	self.values.temporary.single_shot_fast_reload[1][1] = 1.5 -- 1.75 > 1.5
+	self.skill_descs.speedy_reload.multipro = "50%" -- "75%" > "50%"
 
 	-- Far away accuracy increase (40% -> 75%)
 	self.values.shotgun.steelsight_accuracy_inc[1] = 0.25
@@ -56,8 +57,8 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 	self.skill_descs.ammo_reservoir.multipro2 = "10"
 
 	-- Saw Massacre panic chance (50% -> 75%)
-	self.values.saw.panic_when_kill[1].chance = 0.75
-	self.skill_descs.carbon_blade.multipro = "75%"
+	self.values.saw.panic_when_kill[1].chance = 1 -- 0.75 > 1
+	self.skill_descs.carbon_blade.multipro = "100%" -- "75%" > "100%"
 
 	-- Eco Sentry cost reduction (5% -> 10%)
 	self.skill_descs.eco_sentry.multibasic = "10%"
@@ -89,24 +90,24 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 	self.skill_descs.heavy_impact.multipro = "30%"
 
 	-- Body Expertise (30% -> 20% / 90% -> 60%)
-	self.values.weapon.automatic_head_shot_add = { 0.2, 0.6 }
-	self.skill_descs.body_expertise.multibasic = "20%"
+	self.values.weapon.automatic_head_shot_add = { 0.3, 0.6 } -- { 0.2, 0.6 } > { 0.3, 0.6 }
+	self.skill_descs.body_expertise.multibasic = "30%" -- "20%" > "30%" 
 	self.skill_descs.body_expertise.multipro = "60%"
 
 	-- Optical Illusions target chance decrease (35% -> 20%)
-	self.values.player.camouflage_bonus[2] = 0.8
-	self.skill_descs.optic_illusions.multibasic = "20%"
+	self.values.player.camouflage_bonus[2] = 0.85 -- 0.8 > 0.85
+	self.skill_descs.optic_illusions.multibasic = "15%" -- "20%" > "15%"
 
 	-- Unseen Strike duration (6s -> 4s / 18s -> 12s)
 	self.values.temporary.unseen_strike[1][2] = 4
-	self.values.temporary.unseen_strike[2][2] = 12
+	self.values.temporary.unseen_strike[2][2] = 12 -- 12 > 16
 	self.skill_descs.unseen_strike.multibasic3 = "4"
-	self.skill_descs.unseen_strike.multipro = "12"
+	self.skill_descs.unseen_strike.multipro = "16" -- "12" > "16"
 
 	-- Desperado max duration (10s -> 4s)
 	self.values.pistol.stacked_accuracy_bonus[1].accuracy_bonus = 0.1
-	self.values.pistol.stacked_accuracy_bonus[1].max_time = 5
-	self.skill_descs.expert_handling.multibasic2 = "5"
+	self.values.pistol.stacked_accuracy_bonus[1].max_time = 10 -- 5 > 10
+	self.skill_descs.expert_handling.multibasic2 = "10" -- "5" > "10"
 
 	-- Trigger happy max stacks (1 -> 4 / 1 -> 6), damage bonus (120% -> 30%)
 	self.values.pistol.stacking_hit_damage_multiplier[1].max_stacks = 4
@@ -124,16 +125,16 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 	self.skill_descs.nine_lives.multibasic2 = "100%"
 
 	-- Up you go revive health (40% -> 100%)
-	self.values.player.revived_health_regain[1] = 2
-	self.skill_descs.up_you_go.multipro = "100%"
+	self.values.player.revived_health_regain[1] = 0.6 -- 2 > 0.6
+	self.skill_descs.up_you_go.multipro = "600%" -- "100%" > "60%"
 
 	-- Bloodthirst (10s -> 5s / 100% up to 1600% -> 50% up to 800%)
-	self.values.player.melee_damage_stacking[1].max_multiplier = 8
-	self.values.player.melee_damage_stacking[1].melee_multiplier = 0.5
-	self.values.player.melee_kill_increase_reload_speed[1][2] = 5
-	self.skill_descs.bloodthirst.multibasic = "50%"
-	self.skill_descs.bloodthirst.multibasic2 = "800%"
-	self.skill_descs.bloodthirst.multipro2 = "5"
+	self.values.player.melee_damage_stacking[1].max_multiplier = 16 -- 8 > 16
+	self.values.player.melee_damage_stacking[1].melee_multiplier = 1 -- 0.5 > 1
+	self.values.player.melee_kill_increase_reload_speed[1][2] = 3 -- 5 > 3
+	self.skill_descs.bloodthirst.multibasic = "100%" -- "50%" > "100%"
+	self.skill_descs.bloodthirst.multibasic2 = "1600%" -- "800%" > "1600%"
+	self.skill_descs.bloodthirst.multipro2 = "3" -- 5 > 3
 
 
 	-- PERK DECKS
@@ -145,8 +146,8 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 	self.specialization_descs[6][7].multiperk2 = "30%"
 
 	-- Burglar - Dutch Courage pager answer speed (10% -> 20%)
-	self.values.player.alarm_pager_speed_multiplier[1] = 0.8
-	self.specialization_descs[7][7].multiperk3 = "20%"
+	self.values.player.alarm_pager_speed_multiplier[1] = 0.5 -- 0.8 > 0.5
+	self.specialization_descs[7][7].multiperk3 = "50%" -- "20%" > "50%"
 
 	-- Burglar - Breath of Fresh Air crouch speed (10% -> 30%)
 	self.values.player.crouch_speed_multiplier[2] = 1.4
@@ -213,8 +214,8 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 	-- EQUIPMENT
 
 	-- Regular ECM feedback interval (1.5 -> 1), feedback recharge (4 min -> 3 min)
-	self.ecm_feedback_interval = 1
-	self.ecm_feedback_retrigger_interval = 180
+	self.ecm_feedback_interval = 0.5 -- 1 > 0.5
+	self.ecm_feedback_retrigger_interval = 60 -- 180 > 60
 
 	-- Increase armor steadiness scaling
 	self.values.player.body_armor.damage_shake[1] = 1
