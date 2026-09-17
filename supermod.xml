@@ -26,6 +26,7 @@
 			<post :hook_id="equipmentstweakdata"/>
 			<post :hook_id="vehicletweakdata"/>
 			<post :hook_id="narrativetweakdata"/>
+			<post :hook_id="interactiontweakdata"/>
 			<post :hook_id="weapontweakdata"/>
 		</group>
 		<group hook_id="lib/units/">
