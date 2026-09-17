@@ -18,9 +18,13 @@ Hooks:PostHook(SkillTreeTweakData, "init", "shc_init", function (self)
 	-- swap stockholm syndrome and joker
 	self.trees[2].tiers[2][2] = "stockholm_syndrome"
 	self.trees[2].tiers[3][1] = "joker"
+
+	-- swap far away and shotgun CQB.
+	self.trees[4].tiers[2][1] = "iron_man"
+	self.trees[4].tiers[3][1] = "shotgun_cqb"
 		
 	-- swap die hard and shock and awe.
-	self.trees[5].tiers[2][1] = "iron_man"
+	self.trees[5].tiers[2][1] = "far_away"
 	self.trees[5].tiers[3][1] = "show_of_force"
 
 	-- swap saw masscare and bulletstorm
