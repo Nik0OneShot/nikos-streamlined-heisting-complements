@@ -23,6 +23,7 @@
 			<post :hook_id="weaponfactorytweakdata"/>
 			<post :hook_id="weaponfallofftweakdata"/>
 			<post :hook_id="equipmentstweakdata"/>
+			<post :hook_id="vehicletweakdata"/>
 			<post :hook_id="weapontweakdata"/>
 		</group>
 		<group hook_id="lib/units/">
