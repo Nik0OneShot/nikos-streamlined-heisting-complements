@@ -27,6 +27,10 @@ Hooks:PostHook(SkillTreeTweakData, "init", "shc_init", function (self)
 	self.trees[6].tiers[2][1] = "carbon_blade"
 	self.trees[6].tiers[3][2] = "ammo_reservoir"
 
+	-- swap low blow and unseen strike
+	self.trees[12].tiers[3][1] = "unseen_strike"
+	self.trees[12].tiers[4][1] = "backstab"
+
 	-- Add melee damage boost duriation to first perk of Sociopath
 	table.insert(self.specializations[9][1].upgrades, "melee_stacking_hit_expire_t")
 
