@@ -9,6 +9,9 @@ Hooks:PostHook(WeaponTweakData, "init", "shc_init", function (self)
 		akimbo_mappings[v] = k
 	end
 
+	-- allow weapon damage to go higher than 1000. this means you won't have to use damage_modifiers = { damage = 1 } anymore!
+	self.stats.damage = {} for i = 0.1, 50000, 0.1 do table.insert(self.stats.damage, i) end
+
 	-- Piglet
 	self.m32.stats.reload = 18
 
