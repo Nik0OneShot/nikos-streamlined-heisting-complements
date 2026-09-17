@@ -87,6 +87,11 @@ tweak_data.experience_manager.loot_drop_value = {
 	xp_pda9_2 = 3000000,
 }
 
+-- if on one down, add 25% extra xp.
+if Global.game_settings and Global.game_settings.one_down then
+	tweak_data.experience_manager.pro_job_new = 1.25
+end
+
 -- taken from eclipse, flattens XP curve.
 -- Clear out the vanilla level table (including hardcoded lvls 1-9)
 tweak_data.experience_manager.levels = {}
