@@ -1,7 +1,3 @@
-local pro_job = Global.game_settings and Global.game_settings.one_down
-local difficulty = Global.game_settings and Global.game_settings.difficulty or "normal"
-local difficulty_index = tweak_data:difficulty_to_index(difficulty)
-
 tweak_data.projectiles.rocket_ray_frag.damage = 5000 -- commando 101
 tweak_data.projectiles.rocket_frag.damage = 15000 -- hrl-7
 
@@ -91,19 +87,8 @@ tweak_data.experience_manager.loot_drop_value = {
 	xp_pda9_2 = 3000000,
 }
 
--- if on one down, add 25% extra xp.
--- if on pro job, give 50% more experience. on death wish and death sentence, give 100%!
-if difficulty_index < 8 then
-if pro_job then
-	tweak_data.experience_manager.pro_job_multiplier = 1.50
-	tweak_data.experience_manager.pro_job_new = 1.50
-end
-else
-if pro_job then
-	tweak_data.experience_manager.pro_job_multiplier = 2
-	tweak_data.experience_manager.pro_job_new = 2
-end
-end
+-- if on one down, add 50% extra xp.
+tweak_data.experience_manager.pro_job_multiplier = 1.50
 
 -- taken from eclipse, flattens XP curve.
 -- Clear out the vanilla level table (including hardcoded lvls 1-9)
