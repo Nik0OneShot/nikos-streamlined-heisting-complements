@@ -11,6 +11,7 @@
 			<post :hook_id="savefilemanager"/>
 			<post :hook_id="jobmanager"/>
 			<post :hook_id="lootmanager"/>
+			<post :hook_id="moneymanager"/>
 		</group>
 		<group hook_id="lib/player_actions/skills/">
 			<post :hook_id="playeractionexperthandling"/>
