@@ -15,6 +15,7 @@
 			<post :hook_id="playeractiontriggerhappy"/>
 		</group>
 		<group hook_id="lib/tweak_data/">
+			<post :hook_id="tweakdata"/>
 			<post :hook_id="blackmarket/meleeweaponstweakdata"/>
 			<post :hook_id="dottweakdata"/>
 			<post :hook_id="skilltreetweakdata"/>
