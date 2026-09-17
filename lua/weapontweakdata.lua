@@ -40,7 +40,7 @@ Hooks:PostHook(WeaponTweakData, "init", "shc_init", function (self)
 
 	-- amcar rifle
 	self.amcar.CLIP_AMMO_MAX = 30
-	self.amcar.NR_CLIPS_MAX = 11
+	self.amcar.NR_CLIPS_MAX = 6
 	self.amcar.AMMO_MAX = self.amcar.CLIP_AMMO_MAX * self.amcar.NR_CLIPS_MAX
 	self.amcar.fire_mode_data.fire_rate = 60 / 1000
 	self.amcar.stats.damage = 54
