@@ -6,6 +6,7 @@
 		<group hook_id="lib/managers/">
 			<post :hook_id="menu/blackmarketgui"/>
 			<post :hook_id="menu/playerinventorygui"/>
+			<post :hook_id="menu/menuscenemanager"/>
 			<post :hook_id="blackmarketmanager"/>
 			<post :hook_id="playermanager"/>
 			<post :hook_id="savefilemanager"/>
