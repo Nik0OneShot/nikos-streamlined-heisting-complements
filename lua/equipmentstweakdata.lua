@@ -1,7 +1,8 @@
+Hooks:PreHook(EquipmentsTweakData, "init", "singleplayer_boons", function(self)
 local is_singleplayer = Global.game_settings.single_player
 
-Hooks:PreHook(EquipmentsTweakData, "init", "singleplayer_boons", function(self)
 	-- taken from restoration mod, hold more items in singleplayer.
+	self.specials = {} -- see if this fixes that crash...
 	if is_singleplayer then
 		self.specials.acid.max_quantity=4
 		self.specials.caustic_soda.max_quantity=4
