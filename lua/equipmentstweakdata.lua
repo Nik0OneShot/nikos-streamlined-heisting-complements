@@ -1,8 +1,10 @@
-Hooks:PreHook(EquipmentsTweakData, "init", "singleplayer_boons", function(self)
 local is_singleplayer = Global.game_settings and Global.game_settings.single_player
 
-	-- taken from restoration mod, hold more items in singleplayer.
-	self.specials = {} -- see if this fixes that crash...
+-- i really don't want to have to do it this way, but i guess i have to lol
+local equipmentstweakdata_old = EquipmentsTweakData.init
+function EquipmentsTweakData:init()
+	equipmentstweakdata_old(self, tweak_data)
+	
 	if is_singleplayer then
 		self.specials.acid.max_quantity=4
 		self.specials.caustic_soda.max_quantity=4
@@ -53,9 +55,7 @@ local is_singleplayer = Global.game_settings and Global.game_settings.single_pla
 		self.specials.ranc_acid.quantity=1		
 		self.specials.ranc_acid.max_quantity=4				
 	end
-end)
-
-Hooks:PostHook(EquipmentsTweakData, "init", "moar_c4", function(self)
-  -- give more tripmines and shaped charges. just one extra, because it lets yoou do transport a little easier w/o skills.
-  self.trip_mine.quantity = { 4, 4 }
-end)
+	
+	-- more trip mines and shaped charges
+	self.trip_mine.quantity = { 4, 4 }
+end
