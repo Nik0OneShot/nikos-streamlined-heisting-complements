@@ -3,8 +3,8 @@
 local level_id = Global.level_data and Global.level_data.level_id or ""
 local SPRINT_SUSPICION_MULTIPLIER = 3
 local CROUCH_SUSPICION_MULTIPLIER = 2.5
-local SPRINT_DETECTION_MULTIPLIER = 99
-local CROUCH_DETECTION_MULTIPLIER = 99
+local SPRINT_DETECTION_MULTIPLIER = 9
+local CROUCH_DETECTION_MULTIPLIER = 6.25
 local SUSPICION_REASON = "casing_movement"
 
 local function update_movement_suspicion(self)
