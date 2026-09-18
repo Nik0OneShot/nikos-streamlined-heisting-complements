@@ -121,6 +121,37 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	self.wpn_fps_smg_x_hajk.override.wpn_fps_upg_m4_m_pmag.stats.reload = 1
 	self.wpn_fps_smg_x_olympic.override.wpn_fps_upg_m4_m_pmag.stats.reload = 1
 
+	-- speedpull mag rework. reduce concealment by a fuck ton due to it being a big fuckoff orange thing.
+	-- JP36
+	self.wpn_fps_ass_g36_m_quick.stats.concealment = -5
+	self.wpn_fps_ass_g36_m_quick.stats.recoil = 0
+	self.wpn_fps_ass_g36_m_quick.stats.spread = 0
+	-- UAR
+	self.wpn_fps_ass_aug_m_quick.stats.concealment = -5
+	self.wpn_fps_ass_aug_m_quick.stats.recoil = 0
+	self.wpn_fps_ass_aug_m_quick.stats.spread = 0
+	-- AKs
+	self.wpn_fps_upg_ak_m_quick.stats.concealment = -5
+	self.wpn_fps_upg_ak_m_quick.stats.recoil = 0
+	self.wpn_fps_upg_ak_m_quick.stats.spread = 0
+	-- CARs
+	self.wpn_fps_m4_upg_m_quick.stats.concealment = -5
+	self.wpn_fps_m4_upg_m_quick.stats.recoil = 0
+	self.wpn_fps_m4_upg_m_quick.stats.spread = 0
+	-- heather SMG
+	self.wpn_fps_smg_sr2_m_quick.stats.concealment = -5
+	self.wpn_fps_smg_sr2_m_quick.stats.recoil = 0
+	self.wpn_fps_smg_sr2_m_quick.stats.spread = 0
+	-- mark 10 SMG
+	self.wpn_fps_smg_mac10_m_quick.stats.concealment = -5
+	self.wpn_fps_smg_mac10_m_quick.stats.recoil = 0
+	self.wpn_fps_smg_mac10_m_quick.stats.spread = 0
+	-- kobus 90 SMG
+	self.wpn_fps_smg_p90_m_strap.stats.concealment = -5
+	self.wpn_fps_smg_p90_m_strap.stats.recoil = 0
+	self.wpn_fps_smg_p90_m_strap.stats.spread = 0
+
+		
 	-- Set lowest alert range for all suppressors
 	-- Tweak Sting grenade pickup
 	for _, v in pairs(self.parts) do
