@@ -151,14 +151,14 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	self.parts.wpn_fps_smg_p90_m_strap.stats.recoil = 0
 	self.parts.wpn_fps_smg_p90_m_strap.stats.spread = 0
 
-	-- gadgets that should basically be freebies in terms of stats.
+	-- freebie mods
 	-- tactical pistol light
 	self.parts.wpn_fps_upg_fl_pis_tlr1.stats.concealment = 0
 
 	-- skold micro reflex sight
 	self.parts.wpn_fps_upg_o_rms.stats.recoil = 0
 
-	-- gadgets that should be reworked
+	-- shit that should be reworked
 	-- pocket laser
 	self.parts.wpn_fps_upg_fl_pis_laser.stats.recoil = 1
 	self.parts.wpn_fps_upg_fl_pis_laser.stats.concealment = -1
@@ -180,6 +180,11 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	self.parts.wpn_fps_pis_g26_g_gripforce.stats.concealment = -3
 	self.parts.wpn_fps_pis_g26_g_gripforce.stats.recoil = 2
 
+	-- budget suppressor - my intent with this is to make the "you start out with this" option for stealth heists. its still got good stats, but its going to tarnish your concealment quite a bit.
+	self.parts.wpn_fps_upg_ns_ass_filter.stats.concealment = -5
+	self.parts.wpn_fps_upg_ns_ass_filter.stats.recoil = 3
+	self.parts.wpn_fps_upg_ns_ass_filter.stats.spread = -2
+	self.parts.wpn_fps_upg_ns_ass_filter.stats.damage = 0
 		
 	-- Set lowest alert range for all suppressors
 	-- Tweak Sting grenade pickup
