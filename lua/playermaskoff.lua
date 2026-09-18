@@ -3,11 +3,7 @@
 local level_id = Global.level_data and Global.level_data.level_id or ""
 
 Hooks:PostHook(PlayerMaskOff, "_check_action_duck", "CheckDuckAndJump", function(self, t, input)
-    local text = " "
-        managers.hud:show_hint({
-            time = 0,
-            text = text
-        })
+   
     -- Manejar la acción de agacharse
     if input.btn_duck_release or input.btn_duck_press then
         PlayerStandard._check_action_duck(self, t, input)
@@ -20,11 +16,7 @@ Hooks:PostHook(PlayerMaskOff, "_check_action_duck", "CheckDuckAndJump", function
 end)
 
 Hooks:OverrideFunction(PlayerMaskOff, "_check_action_run", function(self, t, input)
-    local text = " "
-        managers.hud:show_hint({
-            time = 0,
-            text = text
-        })
+    
     if self._setting_hold_to_run and input.btn_run_release or self._running and not self._move_dir then
         self._running_wanted = false
 
@@ -65,11 +57,7 @@ Hooks:OverrideFunction(PlayerMaskOff, "_play_equip_animation", function(self) en
 Hooks:OverrideFunction(PlayerMaskOff, "_play_unequip_animation", function(self) end)
 
 Hooks:OverrideFunction(PlayerMaskOff, "_start_action_running", function(self, t)
-    local text = " "
-        managers.hud:show_hint({
-            time = 0,
-            text = text
-        })
+    
     if not self._move_dir then
         self._running_wanted = true
         return
@@ -122,3 +110,12 @@ end)
 Hooks:PostHook(PlayerMaskOff, "enter", "fix_detection", function(self)
     self:_upd_attention()
 end)
+
+local orig_show_hint = HintManager.show_hint
+
+function HintManager:show_hint(id, ...)
+    if id == "mask_off_block_interact" then
+        return
+    end
+    return orig_show_hint(self, id, ...)
+end
