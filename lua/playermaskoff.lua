@@ -11,8 +11,8 @@
 --
 -- Instant Mask has also moved out to its own standalone mod.
 
-local SPRINT_SUSPICION_MULTIPLIER = 1.75
-local CROUCH_SUSPICION_MULTIPLIER = 1.25
+local SPRINT_SUSPICION_MULTIPLIER = 2
+local CROUCH_SUSPICION_MULTIPLIER = 1.5
 local SUSPICION_REASON = "casing_movement"
 
 local function update_movement_suspicion(self)
@@ -50,14 +50,10 @@ Hooks:PostHook(PlayerMaskOff, "_update_check_actions", "CasingMovement_InjectAct
 end)
 
 -- Despite its name, PlayerMaskOff:_check_action_jump receives crouch input.
-Hooks:OverrideFunction(PlayerMaskOff, "_check_action_jump", function(self, t, input)
-    if CasingMovement.settings.crouch then return PlayerStandard._check_action_duck(self, t, input) end
-end)
+Hooks:OverrideFunction(PlayerMaskOff, "_check_action_jump", function(self, t, input) return PlayerStandard._check_action_duck(self, t, input) end end)
 
 -- Likewise, PlayerMaskOff:_check_action_duck receives jump input.
-Hooks:OverrideFunction(PlayerMaskOff, "_check_action_duck", function(self, t, input)
-    if CasingMovement.settings.jump then return PlayerStandard._check_action_jump(self, t, input) end
-end)
+Hooks:OverrideFunction(PlayerMaskOff, "_check_action_duck", function(self, t, input) return PlayerStandard._check_action_jump(self, t, input) end end)
 
 local function stop_running(self, t)
     if self._running then
@@ -68,7 +64,6 @@ local function stop_running(self, t)
 end
 
 Hooks:OverrideFunction(PlayerMaskOff, "_check_action_run", function(self, t, input)
-    if not CasingMovement.settings.sprint then return end
     if (self._setting_hold_to_run and input.btn_run_release) or (self._running and not self._move_dir) then
         self._running_wanted = false
         stop_running(self, t)
