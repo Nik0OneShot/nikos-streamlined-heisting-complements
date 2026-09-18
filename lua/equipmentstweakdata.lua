@@ -1,5 +1,5 @@
 Hooks:PreHook(EquipmentsTweakData, "init", "singleplayer_boons", function(self)
-local is_singleplayer = Global.game_settings and Global.game_settings.single_player then
+local is_singleplayer = Global.game_settings and Global.game_settings.single_player
 
 	-- taken from restoration mod, hold more items in singleplayer.
 	self.specials = {} -- see if this fixes that crash...
