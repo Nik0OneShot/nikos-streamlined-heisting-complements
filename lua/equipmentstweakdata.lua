@@ -1,10 +1,8 @@
 local is_singleplayer = Global.game_settings and Global.game_settings.single_player
 
--- i really don't want to have to do it this way, but i guess i have to lol
-local equipmentstweakdata_old = EquipmentsTweakData.init
-function EquipmentsTweakData:init()
-	equipmentstweakdata_old(self, tweak_data)
-	
+-- carry more items in singleplayer - NOTE: MUST GO INTO INTERACTIONEXT AND DO THE SINGLEPLAYER CODE IN THERE.
+Hooks:PostHook(EquipmentsTweakData, "init", "more_loot", function(self)
+		
 	if is_singleplayer then
 		self.specials.acid.max_quantity=4
 		self.specials.caustic_soda.max_quantity=4
@@ -58,4 +56,4 @@ function EquipmentsTweakData:init()
 	
 	-- more trip mines and shaped charges
 	self.trip_mine.quantity = { 4, 4 }
-end
+end)
