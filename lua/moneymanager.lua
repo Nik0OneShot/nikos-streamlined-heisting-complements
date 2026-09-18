@@ -11,7 +11,7 @@ function MoneyManager:get_secured_bonus_bag_value(carry_id, multiplier)
 		local stars = managers.job:has_active_job() and managers.job:current_difficulty_stars() or 0
 		local money_multiplier = self:get_contract_difficulty_multiplier(stars)
 		local total_stages = job_id and #tweak_data.narrative:job_chain(job_id) or 1
-		local pro_job_bonus = self:get_tweak_value("money_manager", "pro_job_new") or 1
+		local pro_job_bonus = Global.game_settings.one_down or 1 -- shuold actually make pro jobs give more money.
 		bag_value = carry_value
 		bag_risk = math.round(bag_value * money_multiplier)
 
