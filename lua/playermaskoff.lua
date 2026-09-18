@@ -13,6 +13,7 @@ local function update_movement_suspicion(self)
 	if self._running then
 		suspicion_multiplier = SPRINT_SUSPICION_MULTIPLIER
 		detection_multiplier = SPRINT_DETECTION_MULTIPLIER
+		player_base._detection_settings.delay_mul = player_base._detection_settings.delay_mul * detection_multiplier
 	elseif self._state_data.ducking then
 		suspicion_multiplier = CROUCH_SUSPICION_MULTIPLIER
 		detection_multiplier = CROUCH_DETECTION_MULTIPLIER
