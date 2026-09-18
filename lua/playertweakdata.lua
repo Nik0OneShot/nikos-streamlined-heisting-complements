@@ -6,7 +6,7 @@ Hooks:PostHook(PlayerTweakData, "init", "shc_init", function (self)
 	self.terminal_velocity = -7000 --these numbers are never used afaik, but just to be safe...
   
 	self.movement_state.standard.movement.speed.STANDARD_MAX = 300
-	self.movement_state.standard.movement.speed.RUNNING_MAX = 700
+	self.movement_state.standard.movement.speed.RUNNING_MAX = 650
 	self.movement_state.standard.movement.speed.CROUCHING_MAX = 200
 	self.movement_state.standard.movement.speed.STEELSIGHT_MAX = 200
 	self.movement_state.standard.movement.speed.INAIR_MAX = 200
