@@ -32,6 +32,7 @@
 			<post :hook_id="interactiontweakdata"/>
 			<post :hook_id="weapontweakdata"/>
 			<post :hook_id="moneytweakdata"/>
+			<post :hook_id="playertweakdata"/>
 		</group>
 		<group hook_id="lib/units/">
 			<post :hook_id="beings/player/states/playerbipod"/>
