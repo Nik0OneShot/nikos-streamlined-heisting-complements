@@ -40,3 +40,20 @@ Hooks:PostHook(InteractionTweakData, "init", "gage packages xd xd xd uwuwuwwuwuw
 	self.ranc_hold_enter_turret.timer = 0.5
 	self.take_pardons.timer = 0
 end)
+
+-- black lives matter juggers code for use in my mod. lets you interact with things in casing mode.
+
+Hooks:PostHook(InteractionTweakData, "init", "AllowAllCasingInteractions", function(self)
+    -- Loop through every single interaction in the game
+    for id, data in pairs(self) do
+        if type(data) == "table" then
+            -- Remove the mask requirement
+            if data.requires_mask then
+                data.requires_mask = false
+            end
+            
+            -- Force the game to show the prompt in casing mode
+            data.can_interact_in_civilian = true
+        end
+    end
+end)
