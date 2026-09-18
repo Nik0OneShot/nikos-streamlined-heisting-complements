@@ -125,7 +125,7 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	-- JP36
 	self.parts.wpn_fps_ass_g36_m_quick.stats.concealment = -5
 	self.parts.wpn_fps_ass_g36_m_quick.stats.recoil = 0
-	self.partswpn_fps_ass_g36_m_quick.stats.spread = 0
+	self.parts.wpn_fps_ass_g36_m_quick.stats.spread = 0
 	-- UAR
 	self.parts.wpn_fps_ass_aug_m_quick.stats.concealment = -5
 	self.parts.wpn_fps_ass_aug_m_quick.stats.recoil = 0
