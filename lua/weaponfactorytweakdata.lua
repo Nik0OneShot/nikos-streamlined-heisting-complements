@@ -153,7 +153,21 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 
 	-- gadgets that should basically be freebies in terms of stats.
 	-- tactical pistol light
-	self.parts.wpn_fps_upg_fl_pis_tlr1.concealment = 0
+	self.parts.wpn_fps_upg_fl_pis_tlr1.stats.concealment = 0
+
+	-- gadgets that should be reworked
+	-- pocket laser
+	self.parts.wpn_fps_upg_fl_pis_laser.stats.recoil = 1
+	self.parts.wpn_fps_upg_fl_pis_laser.stats.concealment = -1
+
+	-- medved R4 laser sight
+	self.parts.wpn_fps_upg_fl_pis_perst.stats.spread = 1
+	self.parts.wpn_fps_upg_fl_pis_perst.stats.recoil = 0
+	self.parts.wpn_fps_upg_fl_pis_perst.stats.concealment = -1
+
+	-- combined module
+	self.parts.wpn_fps_upg_fl_pis_x400v.stats.concealment = -3
+	self.parts.wpn_fps_upg_fl_pis_x400v.stats.recoil = 3
 
 		
 	-- Set lowest alert range for all suppressors
