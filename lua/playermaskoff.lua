@@ -126,7 +126,7 @@ Hooks:PostHook(PlayerMaskOff, "enter", "fix_detection", function(self)
     self:_upd_attention()
 end)
 
-local orig_show_hint = HintManager.show_hint
+local orig_show_hint = HintManager.init
 
 function HintManager:show_hint(id, ...)
     if id == "mask_off_block_interact" then
