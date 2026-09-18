@@ -11,7 +11,7 @@ local function update_movement_suspicion(self)
     elseif self._state_data.ducking then multiplier = CROUCH_SUSPICION_MULTIPLIER end
     local player_base = self._unit:base()
     player_base:set_suspicion_multiplier(SUSPICION_REASON, multiplier)
-    player_base:set_detection_multiplier(SUSPICION_REASON, multiplier)
+    player_base:set_detection_multiplier(SUSPICION_REASON, multiplier * 5) -- this should make you be detected from further away...i hope?
 end
 
 Hooks:PostHook(PlayerMaskOff, "_check_action_duck", "CheckDuckAndJump", function(self, t, input)
