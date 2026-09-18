@@ -1,8 +1,8 @@
 -- using this now https://modworkshop.net/mod/50586
 
 local level_id = Global.level_data and Global.level_data.level_id or ""
-local SPRINT_SUSPICION_MULTIPLIER = 2
-local CROUCH_SUSPICION_MULTIPLIER = 1.5
+local SPRINT_SUSPICION_MULTIPLIER = 999
+local CROUCH_SUSPICION_MULTIPLIER = 999
 local SUSPICION_REASON = "casing_movement"
 
 local function update_movement_suspicion(self)
