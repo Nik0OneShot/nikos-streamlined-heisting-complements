@@ -19,6 +19,11 @@ Hooks:PostHook(PlayerTweakData, "init", "shc_init", function (self)
 
   -- height changes because of tran wrong
 
+	local pivot_head_translation = Vector3()
+	local pivot_head_rotation = Rotation()
+	local pivot_shoulder_translation = Vector3()
+	local pivot_shoulder_rotation = Rotation()
+
 	self.stances.default.standard.head.translation = Vector3(0, 0, 153)
 	self.stances.default.mask_off.head.translation = Vector3(0, 0, 169)
 	self.stances.default.crouched.head.translation = Vector3(0, 0, 75)
