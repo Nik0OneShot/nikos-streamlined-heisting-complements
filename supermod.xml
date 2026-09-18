@@ -45,6 +45,7 @@
 		</group>
 		<group hook_id="lib/units/beings/player/states/">
 			<post :hook_id="playermaskoff"/>
+			<post :hook_id="playerstandard"/>
 		</group>
 
 	</hooks>
