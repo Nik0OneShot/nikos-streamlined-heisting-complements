@@ -55,6 +55,3 @@ tweak_data:digest_recursive(tweak_data.experience_manager)
 
 -- lets you pick death wish and death sentence off the bat
 tweak_data.difficulty_level_locks = { 0, 0, 0, 0, 0, 0, 0, 0 }
-
--- menu grading
-tweak_data.scene_environments.standard.color_grading = "color_bhd_classic"
