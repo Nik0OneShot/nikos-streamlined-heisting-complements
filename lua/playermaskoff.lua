@@ -50,10 +50,10 @@ Hooks:PostHook(PlayerMaskOff, "_update_check_actions", "CasingMovement_InjectAct
 end)
 
 -- Despite its name, PlayerMaskOff:_check_action_jump receives crouch input.
-Hooks:OverrideFunction(PlayerMaskOff, "_check_action_jump", function(self, t, input) return PlayerStandard._check_action_duck(self, t, input) end end)
+Hooks:OverrideFunction(PlayerMaskOff, "_check_action_jump", function(self, t, input) return PlayerStandard._check_action_duck(self, t, input) end)
 
 -- Likewise, PlayerMaskOff:_check_action_duck receives jump input.
-Hooks:OverrideFunction(PlayerMaskOff, "_check_action_duck", function(self, t, input) return PlayerStandard._check_action_jump(self, t, input) end end)
+Hooks:OverrideFunction(PlayerMaskOff, "_check_action_duck", function(self, t, input) return PlayerStandard._check_action_jump(self, t, input) end)
 
 local function stop_running(self, t)
     if self._running then
