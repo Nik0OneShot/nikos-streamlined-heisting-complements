@@ -43,6 +43,9 @@
 			<post :hook_id="weapons/raycastweaponbase"/>
 			<post :hook_id="weapons/trip_mine/tripminebase"/>
 		</group>
+		<group hook_id="lib/units/beings/player/states/">
+			<post :hook_id="playermaskoff"/>
+		</group>
 
 	</hooks>
 
