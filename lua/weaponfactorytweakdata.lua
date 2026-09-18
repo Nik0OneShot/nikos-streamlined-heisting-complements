@@ -166,8 +166,16 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	self.parts.wpn_fps_upg_fl_pis_perst.stats.concealment = -1
 
 	-- combined module
-	self.parts.wpn_fps_upg_fl_pis_x400v.stats.concealment = -3
+	self.parts.wpn_fps_upg_fl_pis_x400v.stats.concealment = -4
 	self.parts.wpn_fps_upg_fl_pis_x400v.stats.recoil = 3
+
+	-- laser grip
+	self.parts.wpn_fps_pis_g26_g_laser.stats.concealment = -3
+	self.parts.wpn_fps_pis_g26_g_laser.stats.spread = 2
+
+	-- platypus grip
+	self.parts.wpn_fps_pis_g26_g_gripforce.stats.concealment = -3
+	self.parts.wpn_fps_pis_g26_g_gripforce.stats.recoil = 2
 
 		
 	-- Set lowest alert range for all suppressors
