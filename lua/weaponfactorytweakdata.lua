@@ -151,6 +151,10 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	self.parts.wpn_fps_smg_p90_m_strap.stats.recoil = 0
 	self.parts.wpn_fps_smg_p90_m_strap.stats.spread = 0
 
+	-- gadgets that should basically be freebies in terms of stats.
+	-- tactical pistol light
+	self.parts.wpn_fps_upg_fl_pis_tlr1.concealment = 0
+
 		
 	-- Set lowest alert range for all suppressors
 	-- Tweak Sting grenade pickup
