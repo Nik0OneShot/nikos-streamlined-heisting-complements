@@ -70,7 +70,6 @@ local function stop_running(self, t)
 end
 
 Hooks:OverrideFunction(PlayerMaskOff, "_check_action_run", function(self, t, input)
-    if not CasingMovement.settings.sprint then return end
     if (self._setting_hold_to_run and input.btn_run_release) or (self._running and not self._move_dir) then
         self._running_wanted = false
         stop_running(self, t)
