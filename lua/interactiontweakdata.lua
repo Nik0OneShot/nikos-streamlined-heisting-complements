@@ -1,4 +1,7 @@
 Hooks:PostHook(InteractionTweakData, "init", "gage packages xd xd xd uwuwuwwuwuwuwuwuwuwuwuwuwuwuwuwuw and other stuff too #goon", function(self)
+	--Increase default interaction distance resulting from being slightly taller in Resmod, just in case. (sorry mang i stole your shit its not resmod anymore eits mymod now)
+	self.INTERACT_DISTANCE = 215
+
 	self.gage_assignment.timer = 0
     self.requires_ecm_jammer_atm.timer = 8
     self.requires_ecm_jammer_double.timer = 4
