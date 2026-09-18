@@ -3,16 +3,17 @@
 local level_id = Global.level_data and Global.level_data.level_id or ""
 local SPRINT_SUSPICION_MULTIPLIER = 2
 local CROUCH_SUSPICION_MULTIPLIER = 1.5
+local SPRINT_DETECTION_MULTIPLIER = 99
+local CROUCH_DETECTION_MULTIPLIER = 99
 local SUSPICION_REASON = "casing_movement"
 
 local function update_movement_suspicion(self)
     local multiplier = 1
-    if self._running then multiplier = SPRINT_SUSPICION_MULTIPLIER
-    elseif self._state_data.ducking then multiplier = CROUCH_SUSPICION_MULTIPLIER end
+    if self._running then multiplier = SPRINT_SUSPICION_MULTIPLIER or SPRINT_DETECTION_MULTIPLIER
+    elseif self._state_data.ducking then multiplier = CROUCH_SUSPICION_MULTIPLIER or CROUCH_DETECTION_MULTIPLIER end
     local player_base = self._unit:base()
     player_base:set_suspicion_multiplier(SUSPICION_REASON, multiplier)
-    player_base:set_detection_multiplier(SUSPICION_REASON, multiplier * 9999) -- this should make you be detected from further away...i hope?
-                                                                              -- that 9999 * is a test.
+    player_base:set_detection_multiplier(SUSPICION_REASON, multiplier)
 end
 
 Hooks:PostHook(PlayerMaskOff, "_check_action_duck", "CheckDuckAndJump", function(self, t, input)
