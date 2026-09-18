@@ -134,3 +134,13 @@ function HintManager:show_hint(id, ...)
     end
     return orig_show_hint(self, id, ...)
 end
+
+Hooks:PostHook(PlayerMaskOff, "_update_check_actions", "CasingMovement_InjectActions", function(self, t, dt)
+    local input = self:_get_input(t, dt)
+
+    if not self:_interacting() then
+        self:_check_action_jump(t, input)
+        self:_check_action_duck(t, input)
+        self:_check_action_run(t, input)
+    end
+end)
