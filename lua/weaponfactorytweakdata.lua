@@ -155,6 +155,9 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	-- tactical pistol light
 	self.parts.wpn_fps_upg_fl_pis_tlr1.stats.concealment = 0
 
+	-- skold micro reflex sight
+	self.parts.wpn_fps_upg_o_rms.stats.recoil = 0
+
 	-- gadgets that should be reworked
 	-- pocket laser
 	self.parts.wpn_fps_upg_fl_pis_laser.stats.recoil = 1
