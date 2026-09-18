@@ -1,6 +1,6 @@
 -- taken from https://modworkshop.net/mod/50586
 
---[[local level_id = Global.level_data and Global.level_data.level_id or ""
+local level_id = Global.level_data and Global.level_data.level_id or ""
 
 function PlayerStandard:_get_detection_status()
 	local level_data = tweak_data.levels[level_id]
@@ -29,4 +29,3 @@ Hooks:PostHook(PlayerStandard, "_end_action_interact", "_on_interact_ended", fun
 		self._is_suspicious = nil
 	end
 end)
---]]
