@@ -185,6 +185,12 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	self.parts.wpn_fps_upg_ns_ass_filter.stats.recoil = 3
 	self.parts.wpn_fps_upg_ns_ass_filter.stats.spread = -2
 	self.parts.wpn_fps_upg_ns_ass_filter.stats.damage = 0
+
+	-- medved r4 suppressor - basically the same idea as the budget suppressor, i'll be making it free soon and as such this'll be balanced around the idea that it is. this is a different version, except it focuses on accuracy over stability.
+	self.parts.wpn_fps_upg_ns_pis_putnik.stats.concealment = -5
+	self.parts.wpn_fps_upg_ns_pis_putnik.stats.recoil = -2
+	self.parts.wpn_fps_upg_ns_pis_putnik.stats.spread = 3
+	self.parts.wpn_fps_upg_ns_pis_putnik.stats.damage = 0
 		
 	-- Set lowest alert range for all suppressors
 	-- Tweak Sting grenade pickup
