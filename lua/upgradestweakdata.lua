@@ -100,9 +100,9 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 
 	-- Unseen Strike duration (6s -> 4s / 18s -> 12s)
 	self.values.temporary.unseen_strike[1][2] = 4
-	self.values.temporary.unseen_strike[2][2] = 12 -- 12 > 16
+	self.values.temporary.unseen_strike[2][2] = 8 -- 12 > 16 [scratch that] 16 > 8
 	self.skill_descs.unseen_strike.multibasic3 = "4"
-	self.skill_descs.unseen_strike.multipro = "16" -- "12" > "16"
+	self.skill_descs.unseen_strike.multipro = "8" -- "12" > "16" [scratch that] "16" > "8"
 
 	-- Desperado max duration (10s -> 4s)
 	self.values.pistol.stacked_accuracy_bonus[1].accuracy_bonus = 0.1
