@@ -1,25 +1,17 @@
 -- using this now https://modworkshop.net/mod/50586
 
 local level_id = Global.level_data and Global.level_data.level_id or ""
-local SPRINT_SUSPICION_MULTIPLIER = 3
-local CROUCH_SUSPICION_MULTIPLIER = 2.5
-local SPRINT_DETECTION_MULTIPLIER = 9
-local CROUCH_DETECTION_MULTIPLIER = 6.25
+local SPRINT_SUSPICION_MULTIPLIER = 2.5
+local CROUCH_SUSPICION_MULTIPLIER = 6.25
 local SUSPICION_REASON = "casing_movement"
 
 local function update_movement_suspicion(self)
-	local suspicion_multiplier = 1
-	local detection_multiplier = 1
-	if self._running then
-		suspicion_multiplier = SPRINT_SUSPICION_MULTIPLIER
-		detection_multiplier = SPRINT_DETECTION_MULTIPLIER
-	elseif self._state_data.ducking then
-		suspicion_multiplier = CROUCH_SUSPICION_MULTIPLIER
-		detection_multiplier = CROUCH_DETECTION_MULTIPLIER
-	end
-	local player_base = self._unit:base()
-	player_base:set_suspicion_multiplier(SUSPICION_REASON, suspicion_multiplier)
-	player_base:set_detection_multiplier(SUSPICION_REASON, detection_multiplier)
+    local multiplier = 1
+    if self._running then multiplier = SPRINT_SUSPICION_MULTIPLIER
+    elseif self._state_data.ducking then multiplier = CROUCH_SUSPICION_MULTIPLIER end
+    local player_base = self._unit:base()
+    player_base:set_suspicion_multiplier(SUSPICION_REASON, multiplier)
+    player_base:set_detection_multiplier(SUSPICION_REASON, multiplier)
 end
 
 Hooks:PostHook(PlayerMaskOff, "_check_action_duck", "CheckDuckAndJump", function(self, t, input)
