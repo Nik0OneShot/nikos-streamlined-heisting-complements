@@ -234,7 +234,7 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 	self.skill_descs.jail_diet.multibasic = "3%"
 	self.skill_descs.jail_diet.multibasic3 = "20"
 	self.skill_descs.jail_diet.multibasic4 = "i dunno yet"
-	self.skill_descs.jail_diet.multipro = "0.03"
+	self.skill_descs.jail_diet.multipro = "3%"
 	self.skill_descs.jail_diet.multipro3 = "20"
 	self.skill_descs.jail_diet.multipro4 = "not sure yet"
 	
