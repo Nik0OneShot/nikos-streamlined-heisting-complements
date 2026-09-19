@@ -226,17 +226,18 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 	self.values.player.body_armor.damage_shake[6] = 0.40
 	self.values.player.body_armor.damage_shake[7] = 0.22
 
+	-- should give you a max of 20 dodge.
+	self.values.player.detection_risk_add_dodge_chance = {
+		{ 0.03, 3, "below", 25, 0.2 },
+		{ 0.03, 1, "below", 25, 0.2 }
+	}
 	-- sneaky bastard buff, make it more like low blow.
-	self.values.player.detection_risk_add_dodge_chance[1] = "0.03" -- 0.01 > 0.03.
-	self.values.player.detection_risk_add_dodge_chance[3] = "35" -- 35 > 20
-	self.values.player.detection_risk_add_dodge_chance[5] = "0.03" -- 0.01 > 0.03
-	self.values.player.detection_risk_add_dodge_chance[7] = "35" -- 35 > 20.
 	self.skill_descs.jail_diet.multibasic = "3%"
-	self.skill_descs.jail_diet.multibasic3 = "35"
-	self.skill_descs.jail_diet.multibasic4 = "i dunno yet"
+	self.skill_descs.jail_diet.multibasic3 = "20"
+	self.skill_descs.jail_diet.multibasic4 = "20"
 	self.skill_descs.jail_diet.multipro = "3%"
-	self.skill_descs.jail_diet.multipro3 = "35"
-	self.skill_descs.jail_diet.multipro4 = "not sure yet"
+	self.skill_descs.jail_diet.multipro3 = "20"
+	self.skill_descs.jail_diet.multipro4 = "20"
 	
 
 	-- add default skills
