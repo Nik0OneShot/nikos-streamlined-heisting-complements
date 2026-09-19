@@ -26,8 +26,8 @@ tweak_data.experience_manager.pro_day_multiplier = { 1, 1, 1, 1, 1, 1, 1 }
 tweak_data.experience_manager.loot_drop_value = { xp10 = 8000, xp15 = 16000, xp20 = 32000, xp30 = 64000, xp40 = 96000, xp50 = 128000, xp60 = 192000,
 												  xp70 = 256000, xp80 = 320000, xp90 = 384000, xp100 = 512000, xp_pda9_1 = 250000, xp_pda9_2 = 3000000, }
 
--- if on one down, add 50% extra xp.
-tweak_data.experience_manager.pro_job_multiplier = 1.50
+-- if on one down, add 100% extra xp.
+tweak_data.experience_manager.pro_job_multiplier = 2
 
 -- taken from eclipse, flattens XP curve.
 -- Clear out the vanilla level table (including hardcoded lvls 1-9)
