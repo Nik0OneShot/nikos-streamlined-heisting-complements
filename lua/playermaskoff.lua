@@ -1,14 +1,17 @@
 -- using this now https://modworkshop.net/mod/50586
 
-local level_id = Global.level_data and Global.level_data.level_id or ""
-local SPRINT_SUSPICION_MULTIPLIER = 2.5
-local CROUCH_SUSPICION_MULTIPLIER = 6.25
+local SPRINT_SUSPICION_MULTIPLIER = 3
+local CROUCH_SUSPICION_MULTIPLIER = 3
 local SUSPICION_REASON = "casing_movement"
 
-local function update_movement_suspicion(self)
+local function update_movement_suspicion(self, running_override)
+    local running = running_override
+    if running == nil then running = self._running end
+
     local multiplier = 1
-    if self._running then multiplier = SPRINT_SUSPICION_MULTIPLIER
+    if running then multiplier = SPRINT_SUSPICION_MULTIPLIER
     elseif self._state_data.ducking then multiplier = CROUCH_SUSPICION_MULTIPLIER end
+
     local player_base = self._unit:base()
     player_base:set_suspicion_multiplier(SUSPICION_REASON, multiplier)
     player_base:set_detection_multiplier(SUSPICION_REASON, multiplier)
@@ -100,6 +103,7 @@ Hooks:OverrideFunction(PlayerMaskOff, "_start_action_running", function(self, t)
     end
 
     self:set_running(true)
+    update_movement_suspicion(self)
 
     self._end_running_expire_t = nil
     self._start_running_t = t
@@ -114,6 +118,8 @@ Hooks:OverrideFunction(PlayerMaskOff, "_end_action_running", function(self, t)
     if not self._end_running_expire_t then
         self._end_running_expire_t = t + 0.4
     end
+
+    update_movement_suspicion(self, false)
 end)
 
 Hooks:PostHook(PlayerMaskOff, "exit", "CasingMovementExit", function(self)
@@ -126,11 +132,13 @@ Hooks:PostHook(PlayerMaskOff, "enter", "fix_detection", function(self)
     self:_upd_attention()
 end)
 
-local orig_show_hint = HintManager.show_hint
+Hooks:PostHook(HintManager, "init", "get this fucking error out of here cunt", function(self)
+    local orig_show_hint = self.show_hint
 
-function HintManager:show_hint(id, ...)
-    if id == "mask_off_block_interact" then
-        return
+    function self:show_hint(id, ...)
+        if id == "mask_off_block_interact" then
+            return
+        end
+        return orig_show_hint(self, id, ...)
     end
-    return orig_show_hint(self, id, ...)
-end
+end)
