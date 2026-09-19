@@ -226,6 +226,19 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 	self.values.player.body_armor.damage_shake[6] = 0.40
 	self.values.player.body_armor.damage_shake[7] = 0.22
 
+	-- sneaky bastard buff, make it more like low blow.
+	self.values.player.detection_risk_add_dodge_chance[1] = "0.03" -- 0.01 > 0.03.
+	self.values.player.detection_risk_add_dodge_chance[3] = "20" -- 35 > 20
+	self.values.player.detection_risk_add_dodge_chance[5] = "0.03" -- 0.01 > 0.03
+	self.values.player.detection_risk_add_dodge_chance[7] = "20" -- 35 > 20.
+	self.skill_descs.detection_risk_add_dodge_chance.multibasic = "3%"
+	self.skill_descs.detection_risk_add_dodge_chance.multibasic3 = "20"
+	self.skill_descs.detection_risk_add_dodge_chance.multibasic4 = "i dunno yet"
+	self.skill_descs.detection_risk_add_dodge_chance.multipro = "0.03"
+	self.skill_descs.detection_risk_add_dodge_chance.multipro3 = "20"
+	self.skill_descs.detection_risk_add_dodge_chance.multipro4 = "not sure yet"
+	
+
 	-- add default skills
 	self.default_upgrades = {
 		"player_mask_off_pickup", -- lets you pick things up in stealth even w/o chameleon aced.
