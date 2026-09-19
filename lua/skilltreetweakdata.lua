@@ -1,5 +1,25 @@
 Hooks:PostHook(SkillTreeTweakData, "init", "shc_init", function (self)
 
+	-- give infamy 1 skilltree mult universally
+
+	local function digest(value)
+		return Application:digest_value(value, true)
+	end
+
+	self.tier_unlocks = {
+		digest(0),
+		digest(1),
+		digest(3),
+		digest(16)
+	}
+	self.costs = {
+		unlock_tree = digest(0),
+		default = digest(1),
+		pro = digest(3),
+		hightier = digest(4),
+		hightierpro = digest(8)
+	}
+
 	-- Move civilian intimidation duration from Confident to Stockholm Syndrome
 	table.delete(self.skills.cable_guy[1].upgrades, "player_civ_intimidation_mul")
 	table.insert(self.skills.stockholm_syndrome[1].upgrades, "player_civ_intimidation_mul")
