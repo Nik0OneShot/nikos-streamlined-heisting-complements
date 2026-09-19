@@ -1,10 +1,10 @@
 -- using this now https://modworkshop.net/mod/50586
-
-local level_id = Global.level_data and Global.level_data.level_id or ""
 local SPRINT_SUSPICION_MULTIPLIER = 2
 local CROUCH_SUSPICION_MULTIPLIER = 2
+local INTERACT_SUSPICION_MULTIPLIER = 5
 local SPRINT_DETECTION_MULTIPLIER = 5
 local CROUCH_DETECTION_MULTIPLIER = 5
+local INTERACT_DETECTION_MULTIPLIER = 5
 local SUSPICION_REASON = "casing_movement"
 
 local function update_movement_suspicion(self)
@@ -23,7 +23,6 @@ local function update_movement_suspicion(self)
 	player_base:set_suspicion_multiplier(SUSPICION_REASON, suspicion_multiplier)
 	player_base:set_detection_multiplier(SUSPICION_REASON, detection_multiplier)
 end
-
 
 Hooks:PostHook(PlayerMaskOff, "_check_action_duck", "CheckDuckAndJump", function(self, t, input)
 
@@ -64,8 +63,26 @@ Hooks:OverrideFunction(PlayerMaskOff, "_check_action_run", function(self, t, inp
     end
 end)
 
-Hooks:PostHook(PlayerMaskOff, "_check_action_interact", "CheckInteract", function(self)
-    return not self._start_intimidate
+-- required to make interactions have detection values
+
+Hooks:PostHook(PlayerMaskOff, "_check_action_interact", "interaction_detection_multipliers", function(self, t, input)
+	if self._interact_params then
+		local player_base = self._unit:base()
+		player_base:set_suspicion_multiplier(SUSPICION_REASON, INTERACT_SUSPICION_MULTIPLIER)
+		player_base:set_detection_multiplier(SUSPICION_REASON, INTERACT_DETECTION_MULTIPLIER)
+	end
+end)
+
+Hooks:PostHook(PlayerMaskOff, "_end_action_interact", "interaction_reset_detection", function(self)
+	local player_base = self._unit:base()
+	player_base:set_suspicion_multiplier(SUSPICION_REASON, 1)
+	player_base:set_detection_multiplier(SUSPICION_REASON, 1)
+end)
+
+Hooks:PostHook(PlayerMaskOff, "_interupt_action_interact", "interaction_reset_detection_interrupt", function(self)
+	local player_base = self._unit:base()
+	player_base:set_suspicion_multiplier(SUSPICION_REASON, 1)
+	player_base:set_detection_multiplier(SUSPICION_REASON, 1)
 end)
 
 Hooks:OverrideFunction(PlayerMaskOff, "_upd_attention", function(self)
