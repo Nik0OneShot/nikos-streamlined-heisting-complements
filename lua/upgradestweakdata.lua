@@ -231,12 +231,12 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 	self.values.player.detection_risk_add_dodge_chance[3] = "20" -- 35 > 20
 	self.values.player.detection_risk_add_dodge_chance[5] = "0.03" -- 0.01 > 0.03
 	self.values.player.detection_risk_add_dodge_chance[7] = "20" -- 35 > 20.
-	self.skill_descs.menu_jail_diet_beta_desc_sc.multibasic = "3%"
-	self.skill_descs.menu_jail_diet_beta_desc_sc.multibasic3 = "20"
-	self.skill_descs.menu_jail_diet_beta_desc_sc.multibasic4 = "i dunno yet"
-	self.skill_descs.menu_jail_diet_beta_desc_sc.multipro = "0.03"
-	self.skill_descs.menu_jail_diet_beta_desc_sc.multipro3 = "20"
-	self.skill_descs.menu_jail_diet_beta_desc_sc.multipro4 = "not sure yet"
+	self.skill_descs.jail_diet.multibasic = "3%"
+	self.skill_descs.jail_diet.multibasic3 = "20"
+	self.skill_descs.jail_diet.multibasic4 = "i dunno yet"
+	self.skill_descs.jail_diet.multipro = "0.03"
+	self.skill_descs.jail_diet.multipro3 = "20"
+	self.skill_descs.jail_diet.multipro4 = "not sure yet"
 	
 
 	-- add default skills
