@@ -90,9 +90,9 @@ Hooks:PostHook(UpgradesTweakData, "init", "shc_init", function (self)
 	self.skill_descs.heavy_impact.multipro = "30%"
 
 	-- Body Expertise (30% -> 20% / 90% -> 60%)
-	self.values.weapon.automatic_head_shot_add = { 0.3, 0.6 } -- { 0.2, 0.6 } > { 0.3, 0.6 }
-	self.skill_descs.body_expertise.multibasic = "30%" -- "20%" > "30%" 
-	self.skill_descs.body_expertise.multipro = "60%"
+	self.values.weapon.automatic_head_shot_add = { 0.3, 0.9 } -- { 0.2, 0.6 } > { 0.3, 0.6 } [scratch that] > {0.3, 0.9}
+	self.skill_descs.body_expertise.multibasic = "30%" -- "20%" > "30%"
+	self.skill_descs.body_expertise.multipro = "60%" -- "60%" > "90%"
 
 	-- Optical Illusions target chance decrease (35% -> 20%)
 	self.values.player.camouflage_bonus[2] = 0.85 -- 0.8 > 0.85
