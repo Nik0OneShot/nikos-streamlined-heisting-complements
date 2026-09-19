@@ -2,7 +2,9 @@
 
 local SPRINT_SUSPICION_MULTIPLIER = 3
 local CROUCH_SUSPICION_MULTIPLIER = 3
+local INTERACT_SUSPICION_MULTIPLIER = 3
 local SUSPICION_REASON = "casing_movement"
+local INTERACT_REASON = "casing_interact"
 
 local function update_movement_suspicion(self, running_override)
     local running = running_override
@@ -15,6 +17,13 @@ local function update_movement_suspicion(self, running_override)
     local player_base = self._unit:base()
     player_base:set_suspicion_multiplier(SUSPICION_REASON, multiplier)
     player_base:set_detection_multiplier(SUSPICION_REASON, multiplier)
+end
+
+local function set_interact_suspicion(self, active)
+    local player_base = self._unit:base()
+    local multiplier = active and INTERACT_SUSPICION_MULTIPLIER or 1
+    player_base:set_suspicion_multiplier(INTERACT_REASON, multiplier)
+    player_base:set_detection_multiplier(INTERACT_REASON, multiplier)
 end
 
 Hooks:PostHook(PlayerMaskOff, "_check_action_duck", "CheckDuckAndJump", function(self, t, input)
@@ -58,6 +67,18 @@ end)
 
 Hooks:PostHook(PlayerMaskOff, "_check_action_interact", "CheckInteract", function(self)
     return not self._start_intimidate
+end)
+
+Hooks:PostHook(PlayerMaskOff, "_start_action_interact", "casing_interact_start", function(self)
+    set_interact_suspicion(self, true)
+end)
+
+Hooks:PostHook(PlayerMaskOff, "_interupt_action_interact", "casing_interact_interrupt", function(self)
+    set_interact_suspicion(self, false)
+end)
+
+Hooks:PostHook(PlayerMaskOff, "_end_action_interact", "casing_interact_end", function(self)
+    set_interact_suspicion(self, false)
 end)
 
 Hooks:OverrideFunction(PlayerMaskOff, "_upd_attention", function(self)
