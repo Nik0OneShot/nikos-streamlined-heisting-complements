@@ -271,6 +271,17 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	self.parts.wpn_fps_upg_ns_pis_jungle.stats.spread = 6
 	self.parts.wpn_fps_upg_ns_pis_jungle.stats.recoil = -3
 	self.parts.wpn_fps_upg_ns_pis_jungle.stats.concealment = -5
+
+	-- golden rule exclusive set
+	self.parts.wpn_fps_pis_g17_ck.stats.damage = 50
+	self.parts.wpn_fps_pis_g17_ck.stats.spread = 10
+	self.parts.wpn_fps_pis_g17_ck.stats.recoil = 10
+	self.parts.wpn_fps_pis_g17_ck.stats.concealment = -99
+	self.parts.wpn_fps_pis_g17_ck.stats.suppression = 99
+	self.parts.wpn_fps_pis_g17_ck.stats.reload = 8
+	self.parts.wpn_fps_pis_g17_ck.stats.total_ammo_mod = -16
+	self.parts.wpn_fps_pis_g17_ck.custom_stats.ammo_pickup_max_mul = 0.9
+	self.parts.wpn_fps_pis_g17_ck.custom_stats.ammo_pickup_min_mul = 0.3
 		
 	-- Set lowest alert range for all suppressors
 	-- Tweak Sting grenade pickup
