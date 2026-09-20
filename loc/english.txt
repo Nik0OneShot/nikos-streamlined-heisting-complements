@@ -13,5 +13,10 @@
 	"buyweaponmod_title": "Buy Weapon Mod",
 	"buyweaponmod_description": "Buy $item; for $money;?",
 	"buyweaponmod_reject_title": "Not Enough Money",
-	"buyweaponmod_reject": "You need $money; in spending cash to buy $item;."
+	"buyweaponmod_reject": "You need $money; in spending cash to buy $item;.",
+	
+	"bm_equipment_ecm_jammer": "ECM And EMP Jammers",
+	"bm_equipment_ecm_jammer_desc": "To use the ECM Jammer, you need to place it by holding [G].\n\nOnce placed it cannot be moved and it will be active for 20 seconds.\n\nYou can toggle the ECM Jammer by pressing [F]. The ECM Jammer then has a chance to incapacitate your enemies within a certain radius. When consumed, it cools down for 60 seconds.\n\nThe EMP Jammer is an auxiliary device used for hacking electrical doors, ATMs, and other electronic components.\n\nAn Electronic Countermeasure (ECM) is an electronic device designed to trick radar, sonar and other detection systems, easing your way towards your goal.",
+	"menu_ecm_booster_beta_desc": "BASIC: ##$basic##\n\Your ECM jammer and feedback duration is increased by ##25%##.\n\nACE: ##$pro##\n\Your EMP jammer can now be used to ##open certain electronic doors##.",
+	"menu_ecm_2x_beta_desc": "BASIC: ##$basic##\nYou can now place ##2## ECM Jammers instead of just one.\n\nACE: ##$pro##\nThe ECM Jammer duration is increased by an additional ##25%##, and the ECM feedback duration lasts ##25%## longer.\n\nPagers are ##delayed## by the ECM Jammer, and you gain ##+2## EMP Jammers."
 }
