@@ -60,3 +60,15 @@ Hooks:PostHook(InteractionTweakData, "init", "AllowAllCasingInteractions", funct
         end
     end
 end)
+
+-- used for the ECM jammer rework
+
+Hooks:PostHook(InteractionTweakData, "init", "EMPJammer_Interaction", function(self)
+	local ids = { "requires_ecm_jammer_double", "requires_ecm_jammer", "requires_ecm_jammer_atm" }
+	for _, id in ipairs(ids) do
+		local interaction = self[id]
+		if interaction then
+			interaction.slot = 2
+		end
+	end
+end)
