@@ -273,14 +273,14 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	self.parts.wpn_fps_upg_ns_pis_jungle.stats.concealment = -5
 
 	-- golden rule exclusive set
-	self.parts.wpn_fps_pis_g17_ck.stats.damage = 50
-	self.parts.wpn_fps_pis_g17_ck.stats.spread = 10
-	self.parts.wpn_fps_pis_g17_ck.stats.recoil = 10
+	self.parts.wpn_fps_pis_g17_ck.stats.damage = 100
+	self.parts.wpn_fps_pis_g17_ck.stats.spread = 99
+	self.parts.wpn_fps_pis_g17_ck.stats.recoil = 99
 	self.parts.wpn_fps_pis_g17_ck.stats.concealment = -99
 	self.parts.wpn_fps_pis_g17_ck.stats.suppression = 99
 	self.parts.wpn_fps_pis_g17_ck.stats.reload = 8
 	self.parts.wpn_fps_pis_g17_ck.stats.total_ammo_mod = -16
-	self.parts.wpn_fps_pis_g17_ck.custom_stats = { ammo_pickup_max_mul = 0.9, ammo_pickup_min_mul = 0.3 }
+	self.parts.wpn_fps_pis_g17_ck.custom_stats = { armor_piercing_add = 1, can_shoot_through_enemy = true, can_shoot_through_shield = true, can_shoot_through_wall = true, ammo_pickup_max_mul = 0.9, ammo_pickup_min_mul = 0.3 }
 	self.parts.wpn_fps_pis_g17_ck.forbids = { "wpn_fps_upg_ns_pis_small", "wpn_fps_upg_ns_pis_medium", "wpn_fps_upg_ns_pis_medium_gem", "wpn_fps_upg_ns_pis_large_kac", "wpn_fps_upg_ns_pis_large", "wpn_fps_upg_ns_pis_medium_slim", "wpn_fps_upg_ns_pis_jungle", "wpn_fps_upg_ns_ass_filter", "wpn_fps_upg_ns_pis_putnik" }
 		
 	-- Set lowest alert range for all suppressors
