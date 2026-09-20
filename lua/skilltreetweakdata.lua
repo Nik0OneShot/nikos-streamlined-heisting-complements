@@ -131,3 +131,15 @@ Hooks:PostHook(SkillTreeTweakData, "init", "shc_init", function (self)
 		"x_ppk"
 	}
 end)
+
+-- for use in the ECM jammer rework
+
+Hooks:PostHook(SkillTreeTweakData, "init", "EMPJammer_Skilltree", function(self)
+	local skill = self.skills and self.skills.ecm_2x
+	local ace = skill and skill[2] 
+	if not ace or type(ace.upgrades) ~= "table" then return end
+ 
+	if not table.contains(ace.upgrades, "ecm_jammer_interact_quantity_increase") then
+		table.insert(ace.upgrades, "ecm_jammer_interact_quantity_increase")
+	end
+end)
