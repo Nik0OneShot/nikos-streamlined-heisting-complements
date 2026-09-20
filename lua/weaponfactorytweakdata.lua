@@ -234,7 +234,7 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 
 	-- size doesn't matter suppressor
 	self.parts.wpn_fps_upg_ns_pis_small.stats.damage = 0
-	self.parts.wpn_fps_upg_ns_pis_small.recoil = -2
+	self.parts.wpn_fps_upg_ns_pis_small.stats.recoil = -2
 
 	-- standard issue suppressor
 	self.parts.wpn_fps_upg_ns_pis_medium.stats.damage = 0
