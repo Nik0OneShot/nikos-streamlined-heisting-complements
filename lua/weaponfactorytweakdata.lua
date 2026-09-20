@@ -121,6 +121,8 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	self.wpn_fps_smg_x_hajk.override.wpn_fps_upg_m4_m_pmag.stats.reload = 1
 	self.wpn_fps_smg_x_olympic.override.wpn_fps_upg_m4_m_pmag.stats.reload = 1
 
+	-- nikos weapon mod reworks
+
 	-- speedpull mag rework. reduce concealment by a fuck ton due to it being a big fuckoff orange thing.
 	-- JP36
 	self.parts.wpn_fps_ass_g36_m_quick.stats.concealment = -5
@@ -194,6 +196,9 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	self.parts.wpn_fps_upg_ns_pis_putnik.stats.recoil = -2
 	self.parts.wpn_fps_upg_ns_pis_putnik.stats.spread = 3
 	self.parts.wpn_fps_upg_ns_pis_putnik.stats.damage = 0
+
+	-- tactical laser module
+	self.parts.wpn_fps_upg_fl_ass_smg_sho_peqbox.stats.recoil = 1
 		
 	-- Set lowest alert range for all suppressors
 	-- Tweak Sting grenade pickup
