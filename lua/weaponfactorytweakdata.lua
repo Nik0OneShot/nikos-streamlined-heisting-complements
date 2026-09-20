@@ -231,6 +231,46 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	self.parts.wpn_fps_lmg_kacchainsaw_ns_suppressor.stats.spread = 1
 	self.parts.wpn_fps_lmg_kacchainsaw_ns_suppressor.stats.recoil = 0
 	self.parts.wpn_fps_lmg_kacchainsaw_ns_suppressor.stats.concealment = -1
+
+	-- size doesn't matter suppressor
+	self.parts.wpn_fps_upg_ns_pis_small.stats.damage = 0
+	self.parts.wpn_fps_upg_ns_pis_small.recoil = -2
+
+	-- standard issue suppressor
+	self.parts.wpn_fps_upg_ns_pis_medium.stats.damage = 0
+	self.parts.wpn_fps_upg_ns_pis_medium.stats.spread = 2
+	self.parts.wpn_fps_upg_ns_pis_medium.stats.recoil = 1
+	self.parts.wpn_fps_upg_ns_pis_medium.stats.concealment = -2
+
+	-- roctec suppressor
+	self.parts.wpn_fps_upg_ns_pis_medium_gem.stats.damage = 0
+	self.parts.wpn_fps_upg_ns_pis_medium_gem.stats.spread = 3
+	self.parts.wpn_fps_upg_ns_pis_medium_gem.stats.recoil = 2
+	self.parts.wpn_fps_upg_ns_pis_medium_gem.stats.concealment = -3
+
+	-- champions suppressor
+	self.parts.wpn_fps_upg_ns_pis_large_kac.stats.damage = 0
+	self.parts.wpn_fps_upg_ns_pis_large_kac.stats.spread = 4
+	self.parts.wpn_fps_upg_ns_pis_large_kac.stats.recoil = 3
+	self.parts.wpn_fps_upg_ns_pis_large_kac.stats.concealment = -4
+
+	-- monolith suppressor
+	self.parts.wpn_fps_upg_ns_pis_large.stats.damage = 0
+	self.parts.wpn_fps_upg_ns_pis_large.stats.spread = 5
+	self.parts.wpn_fps_upg_ns_pis_large.stats.spread = -2
+	self.parts.wpn_fps_upg_ns_pis_large.stats.concealment = -3
+
+	-- asepsis suppressor
+	self.parts.wpn_fps_upg_ns_pis_medium_slim.stats.damage = 0
+	self.parts.wpn_fps_upg_ns_pis_medium_slim.stats.spread = 2
+	self.parts.wpn_fps_upg_ns_pis_medium_slim.stats.recoil = -1
+	self.parts.wpn_fps_upg_ns_pis_medium_slim.stats.concealment = -1
+
+	-- jungle ninja suppressor
+	self.parts.wpn_fps_upg_ns_pis_jungle.stats.damage = 0
+	self.parts.wpn_fps_upg_ns_pis_jungle.stats.spread = 6
+	self.parts.wpn_fps_upg_ns_pis_jungle.stats.recoil = -3
+	self.parts.wpn_fps_upg_ns_pis_jungle.stats.concealment = -3
 		
 	-- Set lowest alert range for all suppressors
 	-- Tweak Sting grenade pickup
