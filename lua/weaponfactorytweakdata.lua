@@ -229,7 +229,7 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	-- rami suppressor
 	self.parts.wpn_fps_lmg_kacchainsaw_ns_suppressor.stats.damage = 0
 	self.parts.wpn_fps_lmg_kacchainsaw_ns_suppressor.stats.spread = 1
-	self.parts.wpn_fps_lmg_kacchainsaw_ns_suppressor.stats.recoil = -1
+	self.parts.wpn_fps_lmg_kacchainsaw_ns_suppressor.stats.recoil = 0
 	self.parts.wpn_fps_lmg_kacchainsaw_ns_suppressor.stats.concealment = -1
 		
 	-- Set lowest alert range for all suppressors
