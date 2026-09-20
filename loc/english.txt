@@ -5,5 +5,7 @@
 
 	"menu_toggle_one_down": "Pro Job",
 	"menu_one_down": "Pro Job",
-	"menu_toggle_one_down_lobbies": "Pro Job"
+	"menu_toggle_one_down_lobbies": "Pro Job",
+
+	"bm_wp_g17_ck": "DA BLICKY MON"
 }
