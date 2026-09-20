@@ -47,6 +47,7 @@ Hooks:PostHook(WeaponTweakData, "init", "shc_init", function (self)
 	self.amcar.AMMO_MAX = self.amcar.CLIP_AMMO_MAX * self.amcar.NR_CLIPS_MAX
 	self.amcar.fire_mode_data.fire_rate = 60 / 1000
 	self.amcar.stats.damage = 54
+	self.amcar.stats.spread = 17 -- give more accuracy to a gun that otherwise has piss poor accuracy.
 
 	-- chimano 88
 	self.glock_17.stats.damage = 72
