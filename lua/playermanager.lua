@@ -32,3 +32,17 @@ function PlayerManager:on_headshot_dealt(...)
 	on_headshot_dealt_original(self, ...)
 	PlayerDamage.force_chk_health_ratio = false
 end
+
+-- for use in the ECM jammer rework
+-- if using jack of all trades and the ECM jammer is your secondary, force the minimum amount of EMP jammers to 2.
+
+Hooks:PreHook(PlayerManager, "_add_equipment", "EMPJammer_PlayerManager_Pre", function(self, params)
+	ecm_was_present = params and params.equipment == "ecm_jammer" and self:has_equipment("ecm_jammer")
+end)
+
+Hooks:PostHook(PlayerManager, "_add_equipment", "EMPJammer_PlayerManager_Post", function(self, params)
+	if ecm_was_present or not params or params.equipment ~= "ecm_jammer" or not params.slot or params.slot < 2 then return end
+
+	local before = self:get_equipment_amount("ecm_jammer", 2)
+	if before < 2 then self:set_equipment_amount("ecm_jammer", 2, 2) end
+end)
