@@ -203,6 +203,10 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	-- LED combo
 	self.parts.wpn_fps_upg_fl_ass_utg.stats.recoil = 3
 	self.parts.wpn_fps_upg_fl_ass_utg.stats.concealment = -4
+
+	-- low profile suppressor
+	self.parts.wpn_fps_upg_ns_ass_smg_small.stats.damage = 0
+	self.parts.wpn_fps_upg_ns_ass_smg_small.stats.recoil = -2
 		
 	-- Set lowest alert range for all suppressors
 	-- Tweak Sting grenade pickup
