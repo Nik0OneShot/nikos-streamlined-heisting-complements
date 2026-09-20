@@ -213,6 +213,12 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	self.parts.wpn_fps_upg_ns_ass_smg_medium.stats.spread = 2
 	self.parts.wpn_fps_upg_ns_ass_smg_medium.stats.recoil = 1
 	self.parts.wpn_fps_upg_ns_ass_smg_medium.stats.concealment = -3
+
+	-- the bigger the better suppressor
+	self.parts.wpn_fps_upg_ns_ass_smg_large.stats.damage = 0
+	self.parts.wpn_fps_upg_ns_ass_smg_large.stats.spread = 3
+	self.parts.wpn_fps_upg_ns_ass_smg_large.stats.recoil = 2
+	self.parts.wpn_fps_upg_ns_ass_smg_large.stats.concealment = -4
 		
 	-- Set lowest alert range for all suppressors
 	-- Tweak Sting grenade pickup
