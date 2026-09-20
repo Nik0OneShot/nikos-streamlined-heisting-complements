@@ -258,7 +258,7 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	self.parts.wpn_fps_upg_ns_pis_large.stats.damage = 0
 	self.parts.wpn_fps_upg_ns_pis_large.stats.spread = 5
 	self.parts.wpn_fps_upg_ns_pis_large.stats.spread = -2
-	self.parts.wpn_fps_upg_ns_pis_large.stats.concealment = -3
+	self.parts.wpn_fps_upg_ns_pis_large.stats.concealment = -1
 
 	-- asepsis suppressor
 	self.parts.wpn_fps_upg_ns_pis_medium_slim.stats.damage = 0
