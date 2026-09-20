@@ -219,6 +219,12 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	self.parts.wpn_fps_upg_ns_ass_smg_large.stats.spread = 3
 	self.parts.wpn_fps_upg_ns_ass_smg_large.stats.recoil = 2
 	self.parts.wpn_fps_upg_ns_ass_smg_large.stats.concealment = -4
+
+	-- ks12-s long suppressor
+	self.parts.wpn_fps_ass_shak12_ns_suppressor.damage = 0
+	self.parts.wpn_fps_ass_shak12_ns_suppressor.stats.spread = 5
+	self.parts.wpn_fps_ass_shak12_ns_suppressor.stats.recoil = 4
+	self.parts.wpn_fps_ass_shak12_ns_suppressor.stats.concealment = -8
 		
 	-- Set lowest alert range for all suppressors
 	-- Tweak Sting grenade pickup
