@@ -246,13 +246,13 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	self.parts.wpn_fps_upg_ns_pis_medium_gem.stats.damage = 0
 	self.parts.wpn_fps_upg_ns_pis_medium_gem.stats.spread = 3
 	self.parts.wpn_fps_upg_ns_pis_medium_gem.stats.recoil = 2
-	self.parts.wpn_fps_upg_ns_pis_medium_gem.stats.concealment = -3
+	self.parts.wpn_fps_upg_ns_pis_medium_gem.stats.concealment = -4
 
 	-- champions suppressor
 	self.parts.wpn_fps_upg_ns_pis_large_kac.stats.damage = 0
 	self.parts.wpn_fps_upg_ns_pis_large_kac.stats.spread = 4
 	self.parts.wpn_fps_upg_ns_pis_large_kac.stats.recoil = 3
-	self.parts.wpn_fps_upg_ns_pis_large_kac.stats.concealment = -4
+	self.parts.wpn_fps_upg_ns_pis_large_kac.stats.concealment = -5
 
 	-- monolith suppressor
 	self.parts.wpn_fps_upg_ns_pis_large.stats.damage = 0
@@ -270,7 +270,7 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 	self.parts.wpn_fps_upg_ns_pis_jungle.stats.damage = 0
 	self.parts.wpn_fps_upg_ns_pis_jungle.stats.spread = 6
 	self.parts.wpn_fps_upg_ns_pis_jungle.stats.recoil = -3
-	self.parts.wpn_fps_upg_ns_pis_jungle.stats.concealment = -3
+	self.parts.wpn_fps_upg_ns_pis_jungle.stats.concealment = -5
 		
 	-- Set lowest alert range for all suppressors
 	-- Tweak Sting grenade pickup
