@@ -199,6 +199,10 @@ Hooks:PostHook(WeaponFactoryTweakData, "init", "shc_init", function(self)
 
 	-- tactical laser module
 	self.parts.wpn_fps_upg_fl_ass_smg_sho_peqbox.stats.recoil = 1
+
+	-- LED combo
+	self.parts.wpn_fps_upg_fl_ass_utg.stats.recoil = 3
+	self.parts.wpn_fps_upg_fl_ass_utg.stats.concealment = -4
 		
 	-- Set lowest alert range for all suppressors
 	-- Tweak Sting grenade pickup
