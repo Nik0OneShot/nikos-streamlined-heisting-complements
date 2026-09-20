@@ -251,3 +251,21 @@ function UpgradesTweakData.mrwi_deck9_options(...)
 
 	return options
 end
+
+-- for use in the ECM jammer rework
+
+Hooks:PostHook(UpgradesTweakData, "init", "EMPJammer_Upgrade", function(self)
+	if not self.values or not self.definitions then return end
+
+	self.values.emp_jammer = self.values.emp_jammer or {}
+	self.values.emp_jammer.quantity = { 2 }
+	self.definitions.ecm_jammer_interact_quantity_increase = {
+		category = "feature",
+		name_id = "menu_emp_jammer_interact_quantity_increase",
+		upgrade = {
+			category = "emp_jammer",
+			upgrade = "quantity",
+			value = 1
+		}
+	}
+end)
