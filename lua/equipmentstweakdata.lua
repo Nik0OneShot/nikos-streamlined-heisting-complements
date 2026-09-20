@@ -57,3 +57,13 @@ Hooks:PostHook(EquipmentsTweakData, "init", "more_loot", function(self)
 	-- more trip mines and shaped charges
 	self.trip_mine.quantity = { 4, 4 }
 end)
+
+-- for use in the ECM jammer rework
+
+Hooks:PostHook(EquipmentsTweakData, "init", "EMPJammer_Equipments", function(self)
+	local ecm = self.ecm_jammer
+	if not ecm then return end
+ 
+	ecm.quantity = { ecm.quantity and ecm.quantity[1] or 1, 2 }
+	ecm.upgrade_name = { "ecm_jammer", "emp_jammer" }
+end)
